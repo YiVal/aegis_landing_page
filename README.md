@@ -1,4 +1,4 @@
-# Kenya (kenya)
+# Kakoo
 
 An essay factory frontend.
 

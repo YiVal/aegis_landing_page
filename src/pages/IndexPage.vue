@@ -70,7 +70,7 @@
       <div class="col-3"></div>
     </div>
     <div class="row index-3 q-gutter-md">
-      <div class="col-1"></div>
+      <div class="col"></div>
       <q-card flat bordered class="col-3">
         <q-card-section>
           <h5>Us</h5>
@@ -118,7 +118,7 @@
           </ul>
         </q-card-section>
       </q-card>
-      <div class="col-1"></div>
+      <div class="col"></div>
     </div>
     <div class="row index-3"><p></p></div>
     <div class="row index-3"><p></p></div>

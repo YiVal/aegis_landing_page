@@ -1,5 +1,7 @@
 <template>
   <q-page view="1Hh Lpr 1Ff">
+    <introduction-block />
+    <!--
     <div class="row index-0">
       <div class="col-3"></div>
       <div class="index-0 col-6">
@@ -201,10 +203,13 @@
     </div>
     <div class="row index-5"><p></p></div>
     <div class="row index-5"><p></p></div>
+  -->
   </q-page>
 </template>
 
 <script setup>
+import IntroductionBlock from 'components/IntroductionBlock.vue'
+
 const credit_columns = [
   { name: 'price', label: 'Price', field: 'price' },
   { name: 'credit', label: 'Credit', field: 'credit' },
@@ -254,7 +259,7 @@ const service_rows = [
 
 <style>
 .index-0 {
-  background-color: aqua;
+  background-color: white;
 }
 
 .index-1 {

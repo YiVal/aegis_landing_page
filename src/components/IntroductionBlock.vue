@@ -5,18 +5,10 @@
       <div class="title">5-Minute STEM Essays: Plagiarism-Free</div>
       <p>The easy way to write a well-researched and informative STEM essay.</p>
       <start-for-free />
+      <p></p>
+      <q-img src="/stemessay.gif"></q-img>
     </div>
     <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <q-video
-        :ratio="16 / 9"
-        loading="lazy"
-        src="https://www.youtube.com/embed/xjMAPfFEJuM?rel=0"
-      />
-    </div>
   </div>
 </template>
 

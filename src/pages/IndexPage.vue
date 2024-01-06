@@ -1,6 +1,7 @@
 <template>
   <q-page view="1Hh Lpr 1Ff">
     <introduction-block />
+    <we-support />
     <!--
     <div class="row index-0">
       <div class="col-3"></div>
@@ -209,7 +210,9 @@
 
 <script setup>
 import IntroductionBlock from 'components/IntroductionBlock.vue'
+import WeSupport from 'components/WeSupport.vue'
 
+/*
 const credit_columns = [
   { name: 'price', label: 'Price', field: 'price' },
   { name: 'credit', label: 'Credit', field: 'credit' },
@@ -255,6 +258,7 @@ const service_rows = [
     credit: '50',
   },
 ]
+*/
 </script>
 
 <style>

@@ -2,6 +2,7 @@
   <q-page view="1Hh Lpr 1Ff">
     <introduction-block />
     <we-support />
+    <compare-product />
     <!--
     <div class="row index-0">
       <div class="col-3"></div>
@@ -211,6 +212,7 @@
 <script setup>
 import IntroductionBlock from 'components/IntroductionBlock.vue'
 import WeSupport from 'components/WeSupport.vue'
+import CompareProduct from 'components/CompareProduct.vue'
 
 /*
 const credit_columns = [

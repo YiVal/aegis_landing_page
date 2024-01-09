@@ -1,14 +1,23 @@
 <template>
-  <div class="row introduction">
-    <div class="col"></div>
-    <div class="index-intro col-8">
-      <div class="title">5-Minute STEM Essays: Plagiarism-Free</div>
-      <p>The easy way to write a well-researched and informative STEM essay.</p>
-      <start-for-free />
-      <p></p>
-      <q-img src="/stemessay.gif"></q-img>
+  <div class="introduction">
+    <div class="row">
+      <div class="col"></div>
+      <div class="index-intro col-8">
+        <div class="title">5-Minute STEM Essays: Plagiarism-Free</div>
+        <p>
+          The easy way to write a well-researched and informative STEM essay.
+        </p>
+        <start-for-free />
+      </div>
+      <div class="col"></div>
     </div>
-    <div class="col"></div>
+    <div class="row intro-demo">
+      <div class="col"></div>
+      <div class="index-intro col-8">
+        <q-img src="/stemessay.gif" width="640px"></q-img>
+      </div>
+      <div class="col"></div>
+    </div>
   </div>
 </template>
 
@@ -22,7 +31,7 @@ import StartForFree from 'components/StartForFree.vue'
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding-bottom: 5%;
+  padding-bottom: 40px;
 }
 .title {
   max-width: 836px;
@@ -43,5 +52,10 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 32px; /* 152.381% */
+}
+
+.intro-demo {
+  /* background-color: black; */
+  padding-top: 40px;
 }
 </style>

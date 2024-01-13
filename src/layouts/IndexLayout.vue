@@ -3,12 +3,16 @@
     <q-header class="bg-white">
       <q-toolbar class="header-toolbar">
         <q-icon name="img:logo-b.svg" class="icon" />
-        <q-toolbar-title class="title"> <b>STEM Essay!</b> </q-toolbar-title>
+        <q-toolbar-title class="title">
+          <b>{{ $t('appName') }}</b>
+        </q-toolbar-title>
 
-        <q-btn unelevated class="header-button" href="/pricing">Pricing</q-btn>
-        <q-btn unelevated class="header-button" href="/testimonial"
-          >Testimonial</q-btn
-        >
+        <q-btn unelevated class="header-button" href="/pricing">
+          {{ $t('pricing') }}
+        </q-btn>
+        <q-btn unelevated class="header-button" href="/testimonial">
+          {{ $t('testimonial') }}
+        </q-btn>
         <q-space />
         <q-btn unelevated class="header-button" href="/login">Log In</q-btn>
         <start-for-free />
@@ -21,10 +25,12 @@
 
     <footer>
       <q-toolbar class="footer-toolbar">
-        <q-btn unelevated class="footer-button" href="/pricing">Pricing</q-btn>
-        <q-btn unelevated class="footer-button" href="/testimonial"
-          >Testimonial</q-btn
-        >
+        <q-btn unelevated class="footer-button" href="/pricing">
+          {{ $t('pricing') }}
+        </q-btn>
+        <q-btn unelevated class="footer-button" href="/testimonial">
+          {{ $t('testimonial') }}
+        </q-btn>
         <q-toolbar-title></q-toolbar-title>
         <q-btn unelevated class="footer-button" href="/terms-of-service"
           >Terms of Service</q-btn

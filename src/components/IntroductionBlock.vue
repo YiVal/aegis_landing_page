@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col"></div>
       <div class="index-intro col-8">
-        <div class="title">5-Minute STEM Essays: Plagiarism-Free</div>
+        <div class="title">{{ $t('title') }}</div>
         <p>
-          The easy way to write a well-researched and informative STEM essay.
+          {{ $t('description') }}
         </p>
         <start-for-free />
       </div>

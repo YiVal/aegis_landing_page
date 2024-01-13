@@ -2,7 +2,7 @@
   <q-card class="col-3 col-md-8 product-card">
     <div class="row product-title" v-if="title === ''">
       <q-icon name="img:logo-b.svg" class="product-icon" />
-      <b>STEM Essay!</b>
+      <b>{{ $t('appName') }}</b>
     </div>
     <div class="row product-title" v-else>
       <q-img :src="title" width="160px" height="45px" fit="fill" />

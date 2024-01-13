@@ -3,9 +3,9 @@
     <div style="height: 120px"></div>
     <div class="row justify-center">
       <div class="col"></div>
-      <div class="col-12 col-md-auto">
+      <div class="col-11 col-md-auto">
         <div class="cp-title justify-center">
-          What makes our products unique compared to competitors?
+          {{ $t('cp_title') }}
         </div>
       </div>
       <div class="col"></div>
@@ -23,22 +23,17 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 import ProductCard from './ProductCard.vue'
 
-const stem_lines = [
-  'Fully affordable with $30 to generate a full essay with data, tables, codes, and graphs all included.',
-  'Fully controllable by you, simply re-generate the results every time you are unsatisfied with it.',
-  'Absolutely Plagiarism-free and GPT-free, passes all AI detection test.',
-]
-const gunner_lines = [
-  'Charged $30 per single page, plus extra fees on tables and graphs.',
-  'Need to go back and forth with the writer on the topics, outlines, etc.',
-  'Plagiarism risks as the gunner might loaf on the job.',
-]
+const stem_lines = [t('stem_line0'), t('stem_line1'), t('stem_line2')]
+const gunner_lines = [t('gunner_line0'), t('gunner_line1'), t('gunner_line2')]
 const chatgpt_lines = [
-  'Unable to produce multiple paragraphs.',
-  'Unable to produce consistent content throughout each section of the essay.',
-  'Can easily been detected as written by AI',
+  t('chatgpt_line0'),
+  t('chatgpt_line1'),
+  t('chatgpt_line2'),
 ]
 </script>
 

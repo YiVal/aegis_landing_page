@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col"></div>
       <div class="col-8">
-        <p>We support for most stem essay programs.</p>
+        <p>
+          {{ $t('we_support') }}
+        </p>
       </div>
       <div class="col"></div>
     </div>

@@ -1,5 +1,7 @@
 <template>
-  <q-btn class="start-button" href="/start-for-free">Start for Free</q-btn>
+  <q-btn class="start-button" href="/start-for-free">
+    {{ $t('start_for_free') }}
+  </q-btn>
 </template>
 
 <style scoped>

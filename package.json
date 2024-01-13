@@ -1,8 +1,8 @@
 {
-  "name": "kakoo",
+  "name": "kenya",
   "version": "0.0.1",
   "description": "An essay factory frontend.",
-  "productName": "Kakoo",
+  "productName": "STEM Essay!",
   "author": "Yan QiDong <yanqd0@outlook.com>",
   "private": true,
   "scripts": {

@@ -3,7 +3,7 @@
     <div style="height: 120px"></div>
     <div class="row justify-center">
       <div class="col"></div>
-      <div class="col-11 col-md-auto">
+      <div class="col-10 col-md-auto">
         <div class="cp-title justify-center">
           {{ $t('cp_title') }}
         </div>
@@ -12,11 +12,11 @@
     </div>
     <div style="height: 56px"></div>
     <div class="row justify-center">
-      <div class="col"></div>
-      <product-card :lines="stem_lines" />
-      <product-card :lines="gunner_lines" title="/gunner.png" />
-      <product-card :lines="chatgpt_lines" title="/chatgpt.png" />
-      <div class="col"></div>
+      <div class="row justify-center">
+        <product-card :lines="stem_lines" />
+        <product-card :lines="gunner_lines" title="/gunner.png" />
+        <product-card :lines="chatgpt_lines" title="/chatgpt.png" />
+      </div>
     </div>
     <div style="height: 56px"></div>
   </div>

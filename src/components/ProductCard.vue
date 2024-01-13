@@ -1,5 +1,5 @@
 <template>
-  <q-card class="col-3 col-md-8 product-card">
+  <q-card class="col-3 col-md-10 product-card">
     <div class="row product-title" v-if="title === ''">
       <q-icon name="img:logo-b.svg" class="product-icon" />
       <b>{{ $t('appName') }}</b>

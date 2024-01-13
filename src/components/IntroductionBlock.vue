@@ -1,7 +1,6 @@
 <template>
   <div class="introduction">
-    <div class="row">
-      <div class="col"></div>
+    <div class="row justify-center">
       <div class="index-intro col-8">
         <div class="title">{{ $t('title') }}</div>
         <p>
@@ -9,14 +8,11 @@
         </p>
         <start-for-free />
       </div>
-      <div class="col"></div>
     </div>
-    <div class="row intro-demo">
-      <div class="col"></div>
-      <div class="index-intro col-8">
-        <q-img src="/stemessay.gif" width="640px"></q-img>
+    <div class="row justify-center">
+      <div class="col intro-demo">
+        <q-img src="/stemessay.gif" max-width="640px"></q-img>
       </div>
-      <div class="col"></div>
     </div>
   </div>
 </template>
@@ -32,6 +28,7 @@ import StartForFree from 'components/StartForFree.vue'
   align-items: center;
   gap: 16px;
   padding-bottom: 40px;
+  margin-top: 64px;
 }
 .title {
   max-width: 836px;
@@ -56,6 +53,7 @@ p {
 
 .intro-demo {
   /* background-color: black; */
+  max-width: 640px;
   padding-top: 40px;
 }
 </style>

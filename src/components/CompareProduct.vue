@@ -1,14 +1,9 @@
 <template>
-  <div>
-    <div style="height: 120px"></div>
+  <div class="compare-product">
     <div class="row justify-center">
-      <div class="col"></div>
-      <div class="col-10 col-md-auto">
-        <div class="cp-title justify-center">
-          {{ $t('cp_title') }}
-        </div>
+      <div class="cp-title">
+        {{ $t('cp_title') }}
       </div>
-      <div class="col"></div>
     </div>
     <div style="height: 56px"></div>
     <div class="row justify-center">
@@ -18,7 +13,6 @@
         <product-card :lines="chatgpt_lines" title="/chatgpt.png" />
       </div>
     </div>
-    <div style="height: 56px"></div>
   </div>
 </template>
 
@@ -38,6 +32,10 @@ const chatgpt_lines = [
 </script>
 
 <style scoped>
+.compare-product {
+  margin-top: 120px;
+  margin-bottom: 56px;
+}
 .cp-title {
   max-width: 1024px;
   color: var(--title, #1f1f1f);
@@ -47,5 +45,10 @@ const chatgpt_lines = [
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 600px) {
+  .cp-title {
+    font-size: 32px;
+  }
 }
 </style>

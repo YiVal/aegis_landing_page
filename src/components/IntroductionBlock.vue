@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <div class="row justify-center">
-      <div class="index-intro col-8">
+      <div class="index-intro col-12">
         <div class="title">{{ $t('title') }}</div>
         <p>
           {{ $t('description') }}
@@ -27,7 +27,6 @@ import StartForFree from 'components/StartForFree.vue'
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding-bottom: 40px;
   margin-top: 64px;
 }
 .title {
@@ -50,10 +49,20 @@ p {
   font-weight: 400;
   line-height: 32px; /* 152.381% */
 }
+@media (max-width: 600px) {
+  .title {
+    font-size: 36px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
 
 .intro-demo {
   /* background-color: black; */
   max-width: 640px;
   padding-top: 40px;
+  margin-top: 90px;
+  margin-bottom: 100px;
 }
 </style>

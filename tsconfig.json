@@ -1,6 +1,30 @@
 {
-  "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
-    "baseUrl": "."
-  }
+    "target": "ES2021", // Specifies the ECMAScript target version
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext", // Specifies the module code generation method
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false, // Ensures each file can be safely transpiled without relying on other import and export files
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "typeRoots": [
+    "node_modules/@types",
+    "./types"
+  ], // Specifies the location of type definitions
+  "include": [
+    "src"
+  ]
 }

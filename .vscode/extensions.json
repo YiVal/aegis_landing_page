@@ -1,15 +1,19 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "editorconfig.editorconfig",
-    "vue.volar",
-    "wayou.vscode-todo-highlight"
+    "dbaeumer.vscode-eslint", // ESLint
+    "stylelint.vscode-stylelint", // Stylelint
+    "redhat.vscode-yaml", // YAML
+    "christian-kohler.npm-intellisense", // NPM Intellisense
+    "bradlc.vscode-tailwindcss", // Tailwind CSS Intellisense
+    "orta.vscode-jest",
+    "github.vscode-github-actions",
+    "figma.figma-vscode-extension",
+    "ms-edgedevtools.vscode-edge-devtools"
   ],
   "unwantedRecommendations": [
-    "octref.vetur",
-    "hookyqr.beautify",
-    "dbaeumer.jshint",
-    "ms-vscode.vscode-typescript-tslint-plugin"
+    "aaron-bond.better-comments", // Better Comments
+    "coenraads.bracket-pair-colorizer-2", // Bracket Pair Colorizer 2
+    "esbenp.prettier-vscode", // Prettier
+    "ms-vscode.vscode-typescript-tslint-plugin" // TSLint
   ]
 }

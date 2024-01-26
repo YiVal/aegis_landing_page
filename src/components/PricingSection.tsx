@@ -100,7 +100,7 @@ const PricingSection = () => {
         </p>
       </div>
       <table className="divide-y divide-white">
-        <thead className="h-48">
+        <thead className="h-40">
           <tr>
             <td key="icon" className="border-r border-white">
               <div className="flex items-center justify-center px-6 py-3">
@@ -118,13 +118,13 @@ const PricingSection = () => {
                 </div>
                 {header.recommended !== undefined && (
                   <div
-                    className={`mt-16 py-2 px-4 text-center rounded border ${
+                    className={`mt-8 w-32 py-2 px-4 text-left rounded border ${
                       header.recommended
                         ? "bg-blue-500 hover:bg-blue-700 text-white border-blue-700" // If recommended and true
                         : "text-gray-400 border-gray-400" // If recommended but false
                     }`}
                   >
-                    <a href={header.planLink}>Get Started</a>
+                    <a href={header.planLink}>{header.planText}</a>
                   </div>
                 )}
               </td>
@@ -135,16 +135,16 @@ const PricingSection = () => {
           {tableBodyData.map((feature, i) => (
             <tr
               key={feature.featureCategory}
-              className={`px-6 py-3 ${i !== tableBodyData.length - 1 ? "border-b border-white" : ""}`}
+              className={`px-6 py-4 ${i !== tableBodyData.length - 1 ? "border-b border-white" : ""}`}
             >
-              <td className="px-6 py-3 text-gray-400 border-r border-white">
+              <td className="px-6 py-3 text-gray-400 border-r">
                 {feature.featureCategory}
               </td>
               {(["free", "pro", "godMode", "enterprise"] as PlanType[]).map(
-                (planType) => (
+                (planType, i) => (
                   <td
                     key={planType}
-                    className="px-6 py-3 text-gray-400 border-r border-white"
+                    className={`px-6 py-4 text-gray-400 ${i !== 3 ? "border-r border-white" : ""}`}
                   >
                     <ul>
                       {(feature[planType] as string[]).map((item, idx) => (

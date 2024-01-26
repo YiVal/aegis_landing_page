@@ -1,30 +1,43 @@
+// Testimonials.tsx
 import React from "react";
 
-type TestimonialProps = {
-  name: string;
-  title: string;
-  content: string;
-  image: string; // URL of the user's image
-};
+import CommentCard from "./CommentCard";
 
-const Testimonial: React.FC<TestimonialProps> = ({
-  name,
-  title,
-  content,
-  image,
-}) => {
+const Testimonials: React.FC = () => {
+  const testimonials = [
+    {
+      content: "Exceptional service! I couldn't be happier with the results.",
+      author: "Cody Fisher",
+      role: "CEO",
+      email: "tim.jennings@example.com",
+      // Assuming you have a way to import or dynamically load images
+      image: "/path-to-cody-fisher-image.jpg",
+    },
+    // ... more testimonials
+  ];
+
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 m-4">
-      <div className="flex items-center space-x-4">
-        <img src={image} alt={name} className="w-14 h-14 rounded-full" />
-        <div>
-          <p className="text-lg font-bold">{name}</p>
-          <p className="text-sm text-gray-500">{title}</p>
-        </div>
+    <div className="bg-gray-900 text-white p-20">
+      <h2 className="text-3xl font-semibold text-center">
+        What our client say about us
+      </h2>
+      <p className="text-sm text-gray-400 text-center mt-2">
+        We recommend building a plan that works best for you.
+      </p>
+      <div className="flex flex-wrap justify-center mt-8">
+        {testimonials.map((testimonial, index) => (
+          <CommentCard
+            key={index}
+            content={testimonial.content}
+            author={testimonial.author}
+            role={testimonial.role}
+            email={testimonial.email}
+            // image={testimonial.image} // Uncomment when images are available
+          />
+        ))}
       </div>
-      <p className="mt-4 text-gray-600">{content}</p>
     </div>
   );
 };
 
-export default Testimonial;
+export default Testimonials;

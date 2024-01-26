@@ -7,6 +7,7 @@ type PlanHeader = {
   planName: string | React.ReactNode;
   planPrice?: string;
   planLink?: string; // Assuming this is a link to the plan details or sign-up
+  recommended?: boolean;
 };
 
 type PlanType = "free" | "pro" | "godMode" | "enterprise";
@@ -23,21 +24,25 @@ const tableHeaders: PlanHeader[] = [
     planName: "Free",
     planPrice: "$0/mo billed annually",
     planLink: "/free-plan",
+    recommended: false,
   },
   {
     planName: "PRO",
     planPrice: "$29.9/mo billed annually",
     planLink: "/pro-plan",
+    recommended: false,
   },
   {
     planName: "GOD mode",
     planPrice: "$49.9/mo billed annually",
     planLink: "/god-plan",
+    recommended: true,
   },
   {
     planName: "Enterprise",
     planPrice: "Custom quote",
     planLink: "/contact-us",
+    recommended: false,
   },
 ];
 
@@ -102,18 +107,23 @@ const PricingSection = () => {
             {tableHeaders.map((header, idx) => (
               <td
                 key={idx}
-                scope="col"
-                className={`px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
+                className={`px-6 py-3 text-xs ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
               >
-                <div className="flex flex-col justify-between h-full">
+                <div className="flex flex-col text-gray-400">
                   <div>{header.planName}</div>
                   <div>{header.planPrice}</div>
-                  <a
-                    href={header.planLink}
-                    className="inline-block mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border border-blue-700"
-                  >
-                    Get Started
-                  </a>
+                  {header.recommended !== undefined && ( // Check if recommended is defined
+                    <a
+                      href={header.planLink}
+                      className={`py-2 px-4 rounded border ${
+                        header.recommended
+                          ? "bg-blue-500 hover:bg-blue-700 text-white border-blue-700" // If recommended and true
+                          : "text-gray-400 border-gray-400" // If recommended but false
+                      }`}
+                    >
+                      Get Started
+                    </a>
+                  )}
                 </div>
               </td>
             ))}
@@ -121,20 +131,23 @@ const PricingSection = () => {
         </thead>
         <tbody className="">
           {tableBodyData.map((feature, i) => (
-            <tr key={i} className="border-b border-white">
-              <td className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider border-r border-white">
+            <tr
+              key={feature.featureCategory}
+              className={`px-6 py-3 ${i !== tableBodyData.length - 1 ? "border-b border-white" : ""}`}
+            >
+              <td className="px-6 py-3 text-gray-400 border-r border-white">
                 {feature.featureCategory}
               </td>
               {(["free", "pro", "godMode", "enterprise"] as PlanType[]).map(
-                (planType, idx) => (
+                (planType) => (
                   <td
                     key={planType}
-                    className={`px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
+                    className="px-6 py-3 text-gray-400 border-r border-white"
                   >
                     <ul>
                       {(feature[planType] as string[]).map((item, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckmarkIcon className="w-4 h-4 mr-2 mt-0.5 inline-block" />
+                        <li key={item} className="flex">
+                          <CheckmarkIcon className="w-4 h-4" />
                           {item}
                         </li>
                       ))}

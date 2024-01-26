@@ -44,7 +44,7 @@ const comparisonData = [
 
 const ComparisonSection: React.FC = () => {
   return (
-    <div className="py-12 max-w-7xl mx-auto flex flex-col justify-center">
+    <div className="px-36 py-12 max-w-7xl mx-auto flex flex-col justify-center">
       <h2 className="text-3xl font-bold max-w-lg mx-auto text-gray-900 mb-8">
         What makes our products unique compared to competitors?
       </h2>

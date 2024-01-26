@@ -8,11 +8,20 @@ interface StatCardProps {
   icon: JSX.Element;
   title: string;
   value: string | number;
+  rightBorder?: boolean;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ icon, title, value }) => {
+const StatCard: React.FC<StatCardProps> = ({
+  icon,
+  title,
+  value,
+  rightBorder,
+}) => {
+  const borderClass = rightBorder ? "border-r border-gray-300" : ""; // Conditionally set border class
   return (
-    <div className="w-full sm:w-1/3 text-center p-4 border-r border-gray-300">
+    <div className={`w-full sm:w-1/3 text-center p-4 ${borderClass}`}>
+      {" "}
+      {/* Use borderClass here */}
       <div className="flex flex-col items-center">
         {icon}
         <p className="text-sm text-gray-500 py-2">{title}</p>
@@ -38,11 +47,12 @@ const StatsSection: React.FC = () => {
       icon: <PriceIcon className="w-15 h-15" />,
       title: "IB teachers recommend",
       value: "98%",
+      rightBorder: false,
     },
   ];
 
   return (
-    <div className="py-8 text-center bg-gray-100">
+    <div className="py-8 px-36 text-center bg-gray-100">
       <div className="flex flex-row justify-center items-center space-x-4 py-8">
         <h4 className="text-3xl">
           Amplifying Student Voices: The Power of Storytelling
@@ -61,6 +71,7 @@ const StatsSection: React.FC = () => {
             icon={card.icon}
             title={card.title}
             value={card.value}
+            rightBorder={card.rightBorder ?? true}
           />
         ))}
       </div>

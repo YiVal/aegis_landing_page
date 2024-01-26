@@ -8,7 +8,7 @@ const CallToActionSection: React.FC = () => {
       </h2>
 
       <a
-        href="/free"
+        href="/start"
         className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded inline-flex items-center"
       >
         <span>Start for Free</span>

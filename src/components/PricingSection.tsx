@@ -57,7 +57,7 @@ const tableBodyData: FeatureDetails[] = [
     featureCategory: "Includes", // Same group for support
     free: ["250 credits", "Usage of GPT-3.5"],
     pro: ["1000 credits", "Usage of GPT-4"],
-    godMode: ["2000 credits", "Usage of GPT-4", "24 hour VIP Support"],
+    godMode: ["2000 credits", "Usage of GPT-4", "24 hour VIP customer support"],
     enterprise: [],
   },
   {
@@ -131,26 +131,23 @@ const PricingSection = () => {
             ))}
           </tr>
         </thead>
-        <tbody className="">
-          {tableBodyData.map((feature, i) => (
-            <tr
-              key={feature.featureCategory}
-              className={`px-6 py-4 ${i !== tableBodyData.length - 1 ? "border-b border-white" : ""}`}
-            >
-              <td className="px-6 py-3 text-gray-400 border-r">
+        <tbody>
+          {tableBodyData.map((feature) => (
+            <tr key={feature.featureCategory}>
+              <td className="text-gray-400 text-sm whitespace-nowrap align-top border-t border-r min-h-12 px-6 py-4">
                 {feature.featureCategory}
               </td>
               {(["free", "pro", "godMode", "enterprise"] as PlanType[]).map(
                 (planType, i) => (
                   <td
                     key={planType}
-                    className={`px-6 py-4 text-gray-400 ${i !== 3 ? "border-r border-white" : ""}`}
+                    className={`px-6 py-4 align-top text-gray-400 ${i !== 3 ? "border-t border-r border-white" : ""}`}
                   >
                     <ul>
                       {(feature[planType] as string[]).map((item, idx) => (
                         <li key={item} className="flex">
-                          <CheckmarkIcon className="w-4 h-4" />
-                          {item}
+                          <CheckmarkIcon className="w-4 mr-2 mt-0.5 inline-block" />
+                          <div className="w-36">{item}</div>
                         </li>
                       ))}
                     </ul>

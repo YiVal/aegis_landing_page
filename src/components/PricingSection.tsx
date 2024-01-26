@@ -92,7 +92,10 @@ const tableBodyData: FeatureDetails[] = [
 
 const PricingSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-900 px-36 py-16">
+    <div
+      id="pricing"
+      className="flex flex-col items-center justify-center bg-gray-900 px-36 py-16"
+    >
       <div className="flex flex-col items-center mb-10">
         <h2 className="text-3xl font-semibold text-white">Compare plans</h2>
         <p className="text-sm text-gray-400">

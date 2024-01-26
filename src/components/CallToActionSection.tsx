@@ -2,7 +2,7 @@ import React from "react";
 
 const CallToActionSection: React.FC = () => {
   return (
-    <div className="bg-yellow-300 p-10 flex justify-center items-center flex-col">
+    <div className="bg-yellow-300 px-36 py-24 flex justify-center items-center flex-col">
       {/* Replace the image paths with the correct ones for your project */}
 
       <h2 className="text-4xl font-bold text-center mb-4">

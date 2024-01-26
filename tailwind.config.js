@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       minWidth: {
-        900: "900px",
+        1024: "1024px",
       },
     },
   },

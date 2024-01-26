@@ -9,6 +9,15 @@ export default {
       minWidth: {
         1024: "1024px",
       },
+      keyframes: {
+        "slide-in-out": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        "slide-in-out": "slide-in-out 30s linear infinite",
+      },
     },
   },
   plugins: [],

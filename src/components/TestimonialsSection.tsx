@@ -1,7 +1,11 @@
 import React from "react";
 
+import albertImage from "../assets/avatars/albert.svg";
+import bessieImage from "../assets/avatars/bessie.svg";
 import codyImage from "../assets/avatars/cody.svg";
 import ralphImage from "../assets/avatars/ellipse.svg";
+import kathrynImage from "../assets/avatars/kath.svg";
+import leslieImage from "../assets/avatars/lessie.svg";
 import marwinImage from "../assets/avatars/marwin.svg";
 import wadeImage from "../assets/avatars/wade.svg";
 
@@ -39,11 +43,39 @@ const testimonialsTop = [
 
 const testimonialsBot = [
   {
+    name: "Enzy Storia",
+    content:
+      "Reliable and trustworthy. They have earned my trust and loyalty. This company has consistently demonstrated reliability and trustworthiness.",
+    email: "enzy@example.com",
+    image: bessieImage,
+  },
+  {
+    name: "Bessie Cooper",
+    content:
+      "Life-changing experience! I learned so much from their program. Participating in their program was a transformative experience for me.",
+    email: "georgia.young@example.com",
+    image: bessieImage,
+  },
+  {
     name: "Kathryn Murphy",
     content:
       "Efficient and professional. I will definitely use their services again. The professionalism of this team made the entire process effortless and stress-free.",
-    email: "curtis.weaver@example.com",
-    image: codyImage, // Update with the correct path to the image
+    email: "curtis.sssweav@example.com",
+    image: kathrynImage,
+  },
+  {
+    name: "Albert Flores",
+    content:
+      "Outstanding customer support! They went above and beyond to help.",
+    email: "nathan.roberts@example.com",
+    image: albertImage,
+  },
+  {
+    name: "Leslie Alexander",
+    content:
+      "Exceptional service! I couldn't be happier with the results. The team went above and beyond to meet my needs and deliver outstanding outcomes.",
+    email: "michelle.rivera@example.com",
+    image: leslieImage,
   },
 ];
 
@@ -54,7 +86,7 @@ const TestimonialsSection: React.FC = () => {
       <h2 className="text-center text-3xl font-extrabold mb-6">
         What our clients say about us
       </h2>
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-x-hidden">
         <div className="flex items-start">
           {testimonialsTop.map((testimonial) => (
             <CommentCard
@@ -66,7 +98,7 @@ const TestimonialsSection: React.FC = () => {
             />
           ))}
         </div>
-        <div className="flex align-top">
+        <div className="flex items-start">
           {testimonialsBot.map((testimonial) => (
             <CommentCard
               key={testimonial.email}

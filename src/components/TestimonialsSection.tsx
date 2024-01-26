@@ -1,23 +1,39 @@
 import React from "react";
 
 import codyImage from "../assets/avatars/cody.svg";
+import ralphImage from "../assets/avatars/ellipse.svg";
+import marwinImage from "../assets/avatars/marwin.svg";
+import wadeImage from "../assets/avatars/wade.svg";
 
 import CommentCard from "./CommentCard";
 
-// Sample data for testimonials
 const testimonialsTop = [
+  {
+    name: "Ralph Edwards",
+    content:
+      "A game-changer for my business. Thank you for your expertise! The guidance and strategies provided by this team have transformed my business into a thriving success.",
+    email: "dolores.chambers@example.com",
+    image: ralphImage,
+  },
   {
     name: "Cody Fisher",
     content: "Exceptional service! I couldn't be happier with the results.",
     email: "tim.jennings@example.com",
-    image: codyImage, // Update with the correct path to the image
+    image: codyImage,
   },
   {
     name: "Wade Warren",
     content:
       "Reliable and trustworthy. They have earned my trust and loyalty. This company has consistently demonstrated reliability and trustworthiness.",
-    email: "Jackson.graham@example.com",
-    image: codyImage, // Update with the correct path to the image
+    email: "jackson.graham@example.com",
+    image: wadeImage,
+  },
+  {
+    name: "Marvin Mchkinney",
+    content:
+      "An absolute pleasure to work with. They made the process seamless. Working with this team was a seamless and enjoyable experience.",
+    email: "felicia.reid@example.com",
+    image: marwinImage,
   },
 ];
 

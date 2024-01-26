@@ -4,45 +4,43 @@ import { ReactComponent as CheckmarkIcon } from "../assets/mark_s.svg";
 import stemIcon from "../assets/stem.svg";
 
 type PlanHeader = {
-  planName: string | React.ReactNode;
+  planName?: string;
   planPrice?: string;
   planLink?: string; // Assuming this is a link to the plan details or sign-up
   recommended?: boolean;
+  planText: string;
 };
 
 type PlanType = "free" | "pro" | "godMode" | "enterprise";
 
 const tableHeaders: PlanHeader[] = [
   {
-    planName: (
-      <div>
-        <img src={stemIcon} alt="Free Plan" />
-      </div>
-    ),
-  },
-  {
     planName: "Free",
     planPrice: "$0/mo billed annually",
     planLink: "/free-plan",
     recommended: false,
+    planText: "Get Started",
   },
   {
     planName: "PRO",
     planPrice: "$29.9/mo billed annually",
     planLink: "/pro-plan",
     recommended: false,
+    planText: "Get Started",
   },
   {
     planName: "GOD mode",
     planPrice: "$49.9/mo billed annually",
     planLink: "/god-plan",
     recommended: true,
+    planText: "Get Started",
   },
   {
     planName: "Enterprise",
-    planPrice: "Custom quote",
+    planPrice: "We will give you a quote",
     planLink: "/contact-us",
     recommended: false,
+    planText: "Talk to sales",
   },
 ];
 
@@ -102,29 +100,33 @@ const PricingSection = () => {
         </p>
       </div>
       <table className="divide-y divide-white">
-        <thead>
+        <thead className="h-48">
           <tr>
+            <td key="icon" className="border-r border-white">
+              <div className="flex items-center justify-center px-6 py-3">
+                <img src={stemIcon} alt="Icon" />
+              </div>
+            </td>
             {tableHeaders.map((header, idx) => (
               <td
                 key={idx}
-                className={`px-6 py-3 text-xs ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
+                className={`px-6 pt-4 align-top ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
               >
-                <div className="flex flex-col text-gray-400">
-                  <div>{header.planName}</div>
-                  <div>{header.planPrice}</div>
-                  {header.recommended !== undefined && ( // Check if recommended is defined
-                    <a
-                      href={header.planLink}
-                      className={`py-2 px-4 rounded border ${
-                        header.recommended
-                          ? "bg-blue-500 hover:bg-blue-700 text-white border-blue-700" // If recommended and true
-                          : "text-gray-400 border-gray-400" // If recommended but false
-                      }`}
-                    >
-                      Get Started
-                    </a>
-                  )}
+                <div className="text-lg text-white">{header.planName}</div>
+                <div className="text-xs text-gray-500 whitespace-nowrap">
+                  {header.planPrice}
                 </div>
+                {header.recommended !== undefined && (
+                  <div
+                    className={`mt-16 py-2 px-4 text-center rounded border ${
+                      header.recommended
+                        ? "bg-blue-500 hover:bg-blue-700 text-white border-blue-700" // If recommended and true
+                        : "text-gray-400 border-gray-400" // If recommended but false
+                    }`}
+                  >
+                    <a href={header.planLink}>Get Started</a>
+                  </div>
+                )}
               </td>
             ))}
           </tr>

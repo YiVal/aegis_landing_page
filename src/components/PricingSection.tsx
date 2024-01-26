@@ -1,5 +1,6 @@
 import React from "react";
 
+import { ReactComponent as CheckmarkIcon } from "../assets/mark_s.svg";
 import stemIcon from "../assets/stem.svg";
 
 type PlanHeader = {
@@ -7,6 +8,8 @@ type PlanHeader = {
   planPrice?: string;
   planLink?: string; // Assuming this is a link to the plan details or sign-up
 };
+
+type PlanType = "free" | "pro" | "godMode" | "enterprise";
 
 const tableHeaders: PlanHeader[] = [
   {
@@ -49,90 +52,100 @@ type FeatureDetails = {
 const tableBodyData: FeatureDetails[] = [
   {
     featureCategory: "Includes", // Same group for support
-    free: ["N/A"],
-    pro: ["N/A"],
-    godMode: ["Included"],
-    enterprise: ["N/A"],
+    free: ["250 credits", "Usage of GPT-3.5"],
+    pro: ["1000 credits", "Usage of GPT-4"],
+    godMode: ["2000 credits", "Usage of GPT-4", "24 hour VIP Support"],
+    enterprise: [],
   },
   {
     featureCategory: "Essay Topic Generation", // New group label
     free: ["20 credits"],
     pro: ["Free"],
     godMode: ["Free"],
-    enterprise: ["Free"],
+    enterprise: [],
   },
   {
     featureCategory: "Essay Outline Generation", // New group label
     free: ["30 credits"],
     pro: ["30 credits"],
     godMode: ["Free"],
-    enterprise: ["Free"],
+    enterprise: [],
   },
   {
     featureCategory: "Essay Writing", // Group for Essay Writing 200 credits
     free: ["200 credits"],
     pro: ["Free"],
     godMode: ["Free"],
-    enterprise: ["Free"],
+    enterprise: [],
   },
   {
     featureCategory: "Essay Writing", // Same group for Essay Writing 1000 credits
     free: ["1000 credits"],
     pro: ["1000 credits"],
     godMode: ["1000 credits"],
-    enterprise: ["1000 credits"],
+    enterprise: [],
   },
 ];
 
 const PricingSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-green-900 px-36 py-16">
+    <div className="flex flex-col items-center justify-center bg-gray-900 px-36 py-16">
       <div className="flex flex-col items-center mb-10">
         <h2 className="text-3xl font-semibold text-white">Compare plans</h2>
         <p className="text-sm text-gray-400">
           We recommend building a plan that works best for you.
         </p>
       </div>
-      <div className="w-full">
-        <table className="min-w-full divide-y divide-gray-200 border-gray-200 rounded-lg border-b">
-          <thead className="bg-gray-700">
-            <tr>
-              {tableHeaders.map((header, idx) => (
-                <th
-                  key={idx}
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
-                >
-                  {header.planName}
-                  <br />
-                  {header.planPrice}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="bg-gray-800 divide-y divide-gray-700">
-            {tableBodyData.map((feature, i) => (
-              <tr key={i}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
-                  {feature.featureCategory}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
-                  {feature.free.join(", ")}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
-                  {feature.pro.join(", ")}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
-                  {feature.godMode.join(", ")}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
-                  {feature.enterprise.join(", ")}
-                </td>
-              </tr>
+      <table className="divide-y divide-white">
+        <thead>
+          <tr>
+            {tableHeaders.map((header, idx) => (
+              <td
+                key={idx}
+                scope="col"
+                className={`px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
+              >
+                <div className="flex flex-col justify-between h-full">
+                  <div>{header.planName}</div>
+                  <div>{header.planPrice}</div>
+                  <a
+                    href={header.planLink}
+                    className="inline-block mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border border-blue-700"
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </td>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </tr>
+        </thead>
+        <tbody className="">
+          {tableBodyData.map((feature, i) => (
+            <tr key={i} className="border-b border-white">
+              <td className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider border-r border-white">
+                {feature.featureCategory}
+              </td>
+              {(["free", "pro", "godMode", "enterprise"] as PlanType[]).map(
+                (planType, idx) => (
+                  <td
+                    key={planType}
+                    className={`px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
+                  >
+                    <ul>
+                      {(feature[planType] as string[]).map((item, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckmarkIcon className="w-4 h-4 mr-2 mt-0.5 inline-block" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </td>
+                ),
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

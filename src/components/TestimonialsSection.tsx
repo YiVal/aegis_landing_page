@@ -1,43 +1,64 @@
 import React from "react";
 
-import Testimonial from "./Testimonial";
+import codyImage from "../assets/avatars/cody.svg";
+
+import CommentCard from "./CommentCard";
 
 // Sample data for testimonials
-// Sample data for testimonials
-const testimonials = [
+const testimonialsTop = [
   {
     name: "Cody Fisher",
-    title: "CEO of XyzCorp",
     content: "Exceptional service! I couldn't be happier with the results.",
-    image: "/path/to/cody-fisher-image.jpg", // Update with the correct path to the image
+    email: "tim.jennings@example.com",
+    image: codyImage, // Update with the correct path to the image
   },
   {
     name: "Wade Warren",
-    title: "Product Manager at Abc Inc.",
     content:
       "Reliable and trustworthy. They have earned my trust and loyalty. This company has consistently demonstrated reliability and trustworthiness.",
-    image: "/path/to/wade-warren-image.jpg", // Update with the correct path to the image
+    email: "Jackson.graham@example.com",
+    image: codyImage, // Update with the correct path to the image
   },
+];
+
+const testimonialsBot = [
   {
-    name: "Marvin McKinney",
-    title: "Freelance Writer",
+    name: "Kathryn Murphy",
     content:
-      "An absolute pleasure to work with. They made the process seamless. Working with this team was a seamless and enjoyable experience.",
-    image: "/path/to/marvin-mckinney-image.jpg", // Update with the correct path to the image
+      "Efficient and professional. I will definitely use their services again. The professionalism of this team made the entire process effortless and stress-free.",
+    email: "curtis.weaver@example.com",
+    image: codyImage, // Update with the correct path to the image
   },
-  // ...add more testimonials as needed
 ];
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-3xl font-extrabold mb-6">
-          What our clients say about us
-        </h2>
-        <div className="flex overflow-x-scroll scrolling-touch">
-          {testimonials.map((testimonial, index) => (
-            <Testimonial key={index} {...testimonial} />
+    <div className="py-12">
+      <p className="text-center text-xs text-blue-500">Wall of gratitude</p>
+      <h2 className="text-center text-3xl font-extrabold mb-6">
+        What our clients say about us
+      </h2>
+      <div className="flex flex-col">
+        <div className="flex items-start">
+          {testimonialsTop.map((testimonial) => (
+            <CommentCard
+              key={testimonial.email}
+              content={testimonial.content}
+              author={testimonial.name}
+              email={testimonial.email}
+              image={testimonial.image} // Uncomment when images are available
+            />
+          ))}
+        </div>
+        <div className="flex align-top">
+          {testimonialsBot.map((testimonial) => (
+            <CommentCard
+              key={testimonial.email}
+              content={testimonial.content}
+              author={testimonial.name}
+              email={testimonial.email}
+              image={testimonial.image} // Uncomment when images are available
+            />
           ))}
         </div>
       </div>

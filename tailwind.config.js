@@ -12,16 +12,22 @@ export default {
       minWidth: {
         1024: "1024px",
       },
-      keyframes: {
-        "slide-in-out": {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
-        },
-      },
       animation: {
-        "slide-in-out": "slide-in-out 30s linear infinite",
+        "scroll-left": "scroll-left 60s linear infinite",
+        "scroll-right": "scroll-right 60s linear infinite",
+      },
+      keyframes: {
+        "scroll-left": {
+          "0%": { transform: "translateX(30%)" },
+          "100%": { transform: "translateX(-30%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-30%)" },
+          "100%": { transform: "translateX(30%)" },
+        },
       },
     },
   },
+  variants: {},
   plugins: [],
 };

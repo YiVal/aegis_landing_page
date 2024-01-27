@@ -81,13 +81,13 @@ const testimonialsBot = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <div id="testimonial" className="py-12">
-      <p className="text-center text-xs text-blue-500">Wall of gratitude</p>
-      <h2 className="text-center text-3xl font-extrabold mb-6">
+    <div id="testimonial" className="py-12 overflow-hidden px-36 text-xs">
+      <div className="text-center text-blue-500">Wall of gratitude</div>
+      <div className="text-center text-3xl font-extrabold">
         What our clients say about us
-      </h2>
-      <div className="flex flex-col overflow-x-hidden">
-        <div className="flex items-start">
+      </div>
+      <div className="flex flex-col items-center just">
+        <div className="flex items-start animate-scroll-left">
           {testimonialsTop.map((testimonial) => (
             <CommentCard
               key={testimonial.email}
@@ -98,7 +98,7 @@ const TestimonialsSection: React.FC = () => {
             />
           ))}
         </div>
-        <div className="flex items-start">
+        <div className="flex items-start animate-scroll-right">
           {testimonialsBot.map((testimonial) => (
             <CommentCard
               key={testimonial.email}

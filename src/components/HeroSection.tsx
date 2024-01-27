@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="flex flex-col py-12 px-36 text-xs">
+    <div id="hero" className="flex flex-col py-12 px-36 text-xs">
       <div className="bg-white flex rounded-full mx-auto">
         <div className="font-bold text-white p-1 bg-black rounded-full">
           New
@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
       <img
         src="/images/stem-essay.gif"
         alt="StemEssay"
-        className="mx-auto flex justify-center"
+        className="mx-auto flex justify-center my-8"
       />
     </div>
   );

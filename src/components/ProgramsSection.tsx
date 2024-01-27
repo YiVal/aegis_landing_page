@@ -24,17 +24,21 @@ const ProgramsSection: React.FC = () => {
   ];
 
   return (
-    <div className="py-2 flex flex-col">
-      <div className="text-center text-sm text-gray-500 py-4">
+    <div id="program" className="px-36 flex flex-col text-sm">
+      <div className="text-center text-gray-500 py-4">
         We support for most stem essay programs
       </div>
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex justify-center gap-10">
         {cards.map((card, index) => (
           <div
-            key={index}
-            className="flex flex-col justify-end items-center text-center w-64 bg-white p-4 rounded shadow"
+            key={card.alt}
+            className="flex flex-col justify-end items-center text-center w-72 bg-white p-4 rounded shadow"
           >
-            <img src={card.src} alt={card.alt} className="w-24 h-auto mb-3" />
+            <img
+              src={card.src}
+              alt={card.alt}
+              className="w-20 h-20 object-contain object-center"
+            />
             <span className="text-xs max-w-36 text-gray-900">{card.text}</span>
           </div>
         ))}

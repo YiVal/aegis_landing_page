@@ -19,14 +19,12 @@ const StatCard: React.FC<StatCardProps> = ({
 }) => {
   const borderClass = rightBorder ? "border-r border-gray-300" : ""; // Conditionally set border class
   return (
-    <div className={`w-full sm:w-1/3 text-center p-4 ${borderClass}`}>
-      {" "}
-      {/* Use borderClass here */}
-      <div className="flex flex-col items-center">
-        {icon}
-        <p className="text-sm text-gray-500 py-2">{title}</p>
-        <p className="text-2xl font-bold">{value}</p>
-      </div>
+    <div
+      className={`flex flex-col items-center w-full text-center py-4 ${borderClass}`}
+    >
+      {icon}
+      <p className="text-sm text-gray-500 py-2">{title}</p>
+      <p className="text-2xl font-bold">{value}</p>
     </div>
   );
 };
@@ -34,17 +32,17 @@ const StatCard: React.FC<StatCardProps> = ({
 const StatsSection: React.FC = () => {
   const cards: StatCardProps[] = [
     {
-      icon: <UserIcon className="w-15 h-15" />,
+      icon: <UserIcon className="w-16 h-16" />,
       title: "Registered users",
       value: "124",
     },
     {
-      icon: <ScienceIcon className="w-15 h-15" />,
+      icon: <ScienceIcon className="w-16 h-16" />,
       title: "Essays generated",
       value: "11,238",
     },
     {
-      icon: <PriceIcon className="w-15 h-15" />,
+      icon: <PriceIcon className="w-16 h-16" />,
       title: "IB teachers recommend",
       value: "98%",
       rightBorder: false,
@@ -52,17 +50,17 @@ const StatsSection: React.FC = () => {
   ];
 
   return (
-    <div className="py-8 px-36 text-center bg-gray-100">
-      <div className="flex flex-row justify-center items-center space-x-4 py-8">
-        <h4 className="text-3xl">
+    <div id="stats" className="py-8 px-36 text-center bg-gray-100">
+      <div className="flex flex-row justify-center items-center py-8">
+        <div className="text-3xl mr-4">
           Amplifying Student Voices: The Power of Storytelling
-        </h4>
-        <p className="text-lg">
+        </div>
+        <div className="text-lg ml-4">
           We can actively help students effectively tell their story in a
           <span className="text-blue-500"> more engaging way</span> and make
           their
           <span className="text-blue-500"> voice more audible</span>
-        </p>
+        </div>
       </div>
       <div className="flex flex-row justify-center">
         {cards.map((card, index) => (

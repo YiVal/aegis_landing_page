@@ -94,11 +94,11 @@ const PricingSection = () => {
   return (
     <div
       id="pricing"
-      className="flex flex-col items-center justify-center bg-gray-900 px-36 py-16"
+      className="flex flex-col items-center text-sm justify-center bg-brown text-white px-36 py-24 gap-12"
     >
-      <div className="flex flex-col items-center mb-10">
+      <div className="flex flex-col items-center gap-4">
         <h2 className="text-3xl font-semibold text-white">Compare plans</h2>
-        <p className="text-sm text-gray-400">
+        <p className="text-gray-400">
           We recommend building a plan that works best for you.
         </p>
       </div>
@@ -115,15 +115,15 @@ const PricingSection = () => {
                 key={idx}
                 className={`px-6 pt-4 align-top ${idx !== tableHeaders.length - 1 ? "border-r border-white" : ""}`}
               >
-                <div className="text-lg text-white">{header.planName}</div>
+                <div className="text-lg ">{header.planName}</div>
                 <div className="text-xs text-gray-500 whitespace-nowrap">
                   {header.planPrice}
                 </div>
                 {header.recommended !== undefined && (
                   <div
-                    className={`mt-8 w-32 py-2 px-4 text-left rounded border ${
+                    className={`mt-8 max-w-32 py-2 px-4 text-center rounded border ${
                       header.recommended
-                        ? "bg-blue-500 hover:bg-blue-700 text-white border-blue-700" // If recommended and true
+                        ? "bg-blue-500 hover:bg-blue-700 border-blue-700" // If recommended and true
                         : "text-gray-400 border-gray-400" // If recommended but false
                     }`}
                   >
@@ -137,20 +137,20 @@ const PricingSection = () => {
         <tbody>
           {tableBodyData.map((feature) => (
             <tr key={feature.featureCategory}>
-              <td className="text-gray-400 text-sm whitespace-nowrap align-top border-t border-r min-h-12 px-6 py-4">
+              <td className="text-xs whitespace-nowrap align-top border-t border-r min-h-12 px-6 py-4">
                 {feature.featureCategory}
               </td>
               {(["free", "pro", "godMode", "enterprise"] as PlanType[]).map(
                 (planType, i) => (
                   <td
                     key={planType}
-                    className={`px-6 py-4 align-top text-gray-400 ${i !== 3 ? "border-t border-r border-white" : ""}`}
+                    className={`px-6 py-4 align-top ${i !== 3 ? "border-t border-r border-white" : ""}`}
                   >
                     <ul>
                       {(feature[planType] as string[]).map((item, idx) => (
                         <li key={item} className="flex">
-                          <CheckmarkIcon className="w-4 mr-2 mt-0.5 inline-block" />
-                          <div className="w-36">{item}</div>
+                          <CheckmarkIcon className="w-3 mr-1" />
+                          <div className="w-28 text-xs">{item}</div>
                         </li>
                       ))}
                     </ul>

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        brown: "#1E3A2B",
+      },
       minWidth: {
         1024: "1024px",
       },

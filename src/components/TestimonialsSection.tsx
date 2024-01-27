@@ -81,7 +81,7 @@ const testimonialsBot = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <div className="py-12">
+    <div id="testimonial" className="py-12">
       <p className="text-center text-xs text-blue-500">Wall of gratitude</p>
       <h2 className="text-center text-3xl font-extrabold mb-6">
         What our clients say about us

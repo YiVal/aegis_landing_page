@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx,html}", // Adjust this glob pattern to match your project file structure
@@ -6,6 +7,7 @@ export default {
   ],
   theme: {
     extend: {
+      scrollBehavior: ["smooth"],
       colors: {
         brown: "#1E3A2B",
       },

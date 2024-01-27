@@ -14,7 +14,7 @@ if (rootElement !== null) {
   const root = createRoot(rootElement);
 
   root.render(
-    <div className="min-w-1024 text-base bg-gray-100">
+    <div className="min-w-1024 scroll-smooth text-base bg-gray-100">
       <React.StrictMode>
         <ApolloProvider client={client}>
           <AppProvider>

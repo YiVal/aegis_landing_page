@@ -1,4 +1,5 @@
 import React from "react";
+import ReactPlayer from "react-player";
 
 const HeroSection: React.FC = () => {
   return (
@@ -25,9 +26,12 @@ const HeroSection: React.FC = () => {
       >
         Start for Free
       </a>
-      <img
-        src="/images/stem-essay.gif"
-        alt="StemEssay"
+      <ReactPlayer
+        url="https://www.youtube.com/watch?v=cBFzQmuv_mY"
+        playing={true}
+        muted={true}
+        loop={true}
+        height={640}
         className="mx-auto flex justify-center my-8"
       />
     </div>

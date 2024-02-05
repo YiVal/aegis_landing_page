@@ -24,7 +24,7 @@ const ProgramsSection: React.FC = () => {
   ];
 
   return (
-    <div id="program" className="px-36 flex flex-col text-sm">
+    <div id="program" className="px-36 mt-24 flex flex-col text-sm">
       <div className="text-center text-gray-500 py-4">
         We support for most stem essay programs
       </div>

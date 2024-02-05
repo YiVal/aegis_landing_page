@@ -94,7 +94,7 @@ const PricingSection = () => {
   return (
     <div
       id="pricing"
-      className="flex flex-col items-center text-sm justify-center bg-brown text-white px-36 py-24 gap-12"
+      className="flex flex-col items-center text-sm justify-center bg-brown text-white px-36 py-24 mt-32 gap-12"
     >
       <div className="flex flex-col items-center gap-4">
         <h2 className="text-3xl font-semibold text-white">Compare plans</h2>

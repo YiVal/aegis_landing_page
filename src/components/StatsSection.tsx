@@ -50,7 +50,7 @@ const StatsSection: React.FC = () => {
   ];
 
   return (
-    <div id="stats" className="py-8 px-36 text-center bg-gray-100">
+    <div id="stats" className="py-8 px-36 mt-24 text-center bg-gray-100">
       <div className="flex flex-row justify-center items-center py-8">
         <div className="text-3xl mr-4">
           Amplifying Student Voices: The Power of Storytelling

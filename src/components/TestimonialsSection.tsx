@@ -81,7 +81,7 @@ const testimonialsBot = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <div id="testimonial" className="py-12 overflow-hidden px-36 text-xs">
+    <div id="testimonial" className="py-12 overflow-hidden px-36 mt-24 text-xs">
       <div className="text-center text-blue-500">Wall of gratitude</div>
       <div className="text-center text-3xl font-extrabold">
         What our clients say about us

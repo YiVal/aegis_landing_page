@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 const HeroSection: React.FC = () => {
   return (
-    <div id="hero" className="flex flex-col py-12 px-36 text-xs mt-16">
+    <div id="hero" className="flex flex-col py-12 px-36 text-xs mt-16 ">
       <div className="bg-white flex rounded-full mx-auto">
         <div className="font-bold text-white p-1 bg-black rounded-full">
           New

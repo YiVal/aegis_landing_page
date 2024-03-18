@@ -1,5 +1,7 @@
 import React from "react";
-import ReactPlayer from "react-player";
+
+//import ReactPlayer from "react-player";
+import videoSrc from "../assets/Kakuvideo.mp4";
 
 const HeroSection: React.FC = () => {
   return (
@@ -26,14 +28,19 @@ const HeroSection: React.FC = () => {
       >
         Start for Free
       </a>
-      <ReactPlayer
-        url="https://www.youtube.com/watch?v=s92wEkeKBH0"
-        playing={true}
-        muted={true}
-        loop={true}
+      <video
+        controls
+        autoPlay
+        muted
+        loop
         height={640}
         className="mx-auto flex justify-center my-8"
-      />
+      >
+        <source src={videoSrc} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Insert an empty line here */}
     </div>
   );
 };

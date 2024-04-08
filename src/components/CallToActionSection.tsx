@@ -7,8 +7,10 @@ const CallToActionSection: React.FC = () => {
         Compose your initial essay draft today.
       </div>
       <a
-        href="/start"
+        href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
         className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded flex items-center"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <span>Start for Free</span>
       </a>

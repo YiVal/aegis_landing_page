@@ -23,8 +23,10 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       <a
-        href="/start"
+        href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
         className="flex justify-center bg-blue-600 mx-auto text-white py-2 text-sm px-6 my-4 rounded hover:bg-blue-700"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Start for Free
       </a>

@@ -1,9 +1,9 @@
 ---
 name: Performance Issue Report
 about: Report any performance issues like slow loading times or unresponsive elements
-title: '[PERFORMANCE ISSUE]'
+title: "[PERFORMANCE ISSUE]"
 labels: bug, performance
-assignees: ''
+assignees: ""
 ---
 
 **Describe the issue**
@@ -11,6 +11,7 @@ A clear and concise description of what the issue is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Notice slow performance
@@ -19,6 +20,7 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Desktop (please complete the following information):**
+
 - OS: [e.g. iOS]
 - Browser [e.g. chrome, safari]
 - Version [e.g. 22]

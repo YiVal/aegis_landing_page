@@ -1,16 +1,9 @@
 {
   "displayName": "e2e",
   "testEnvironment": "node",
-  "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!**/*.d.ts"
-  ],
-  "testMatch": [
-    "<rootDir>/src/**/*e2e.test.(j|t)s?(x)"
-  ],
-  "testPathIgnorePatterns": [
-    "/node_modules/"
-  ],
+  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!**/*.d.ts"],
+  "testMatch": ["<rootDir>/src/**/*e2e.test.(j|t)s?(x)"],
+  "testPathIgnorePatterns": ["/node_modules/"],
   "transform": {
     "^.+\\.(js|jsx|mjs)$": "babel-jest",
     "^.+\\.tsx?$": "babel-jest",
@@ -26,15 +19,7 @@
   "moduleNameMapper": {
     "^react-native$": "react-native-web"
   },
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js",
-    "jsx",
-    "json",
-    "node",
-    "mjs"
-  ],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node", "mjs"],
   "globals": {
     "ts-jest": {
       "tsConfigFile": "<rootDir>/tsconfig.json"

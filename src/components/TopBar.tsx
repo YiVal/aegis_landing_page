@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ReactComponent as IconImage } from "../assets/avatars/aegisLogo.svg";
 
 const TopBar: React.FC = () => {
@@ -38,7 +39,3 @@ const TopBar: React.FC = () => {
 };
 
 export default TopBar;
-
-
-
-

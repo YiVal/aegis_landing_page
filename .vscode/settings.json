@@ -8,56 +8,58 @@
     "overrideConfigFile": ".eslintrc"
   },
   "stylelint.configFile": ".stylelintrc",
-  "stylelint.validate": [
-    "css",
-    "sass",
-    "scss",
-    "less",
-  ],
+  "stylelint.validate": ["css", "sass", "scss", "less"],
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "[scss]": { // .scss
+  "[scss]": {
+    // .scss
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    },
+    }
   },
-  "[less]": { // .less
+  "[less]": {
+    // .less
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    },
+    }
   },
-  "[css]": { // .css for Tailwind CSS
+  "[css]": {
+    // .css for Tailwind CSS
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    },
+    }
   },
-  "[javascript]": { // .js
+  "[javascript]": {
+    // .js
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    },
+    }
   },
-  "[typescript]": { // .ts
+  "[typescript]": {
+    // .ts
     "editor.formatOnSave": false, // .ts // 阻止vscode自带的format on save，否则会overrride eslint/prettier format
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true // eslint会自动format以及修改错误，这个不需要的话可以讨论下，可能fixAll会出现一些不想有的改动
-    },
+    }
   },
-  "[typescriptreact]": { // .tsx
+  "[typescriptreact]": {
+    // .tsx
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    },
+    }
   },
-  "[javascriptreact]": { // .jsx
+  "[javascriptreact]": {
+    // .jsx
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    },
+    }
   },
   /*
       editor本身相关行为， 现在的主要作用是所有文件都使用tab作为indent，而且tab = 2 space

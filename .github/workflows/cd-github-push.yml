@@ -3,30 +3,30 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main # Set a branch to deploy
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '21'  # Set this to the node version you are using
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "21" # Set this to the node version you are using
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Configure Git
-      run: |
-        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-        git config --global user.name "${{ github.actor }}"
+      - name: Configure Git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
 
-    - name: Build and Deploy
-      run: npm run deploy
-      env:
-        CI: false
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Build and Deploy
+        run: npm run deploy
+        env:
+          CI: false
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

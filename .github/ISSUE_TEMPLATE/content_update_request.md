@@ -1,9 +1,9 @@
 ---
 name: Content Update Request
 about: Suggest an update or change to the website content
-title: '[CONTENT UPDATE]'
+title: "[CONTENT UPDATE]"
 labels: enhancement, content
-assignees: ''
+assignees: ""
 ---
 
 **Section or page where the content needs updating**

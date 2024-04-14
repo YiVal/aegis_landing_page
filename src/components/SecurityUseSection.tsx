@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ReactComponent as Step1SVG } from "../assets/1point.svg";
 import { ReactComponent as Step2SVG } from "../assets/2point.svg";
 import { ReactComponent as Step3SVG } from "../assets/3point.svg";
@@ -9,8 +10,13 @@ interface NumberedSquareProps {
   className?: string;
 }
 
-const NumberedSquare: React.FC<NumberedSquareProps> = ({ number, className }) => (
-  <div className={`flex justify-center items-center bg-deepblue text-white w-7 h-7 mb-6 last:mb-0 ${className}`}>
+const NumberedSquare: React.FC<NumberedSquareProps> = ({
+  number,
+  className,
+}) => (
+  <div
+    className={`flex justify-center items-center bg-deepblue text-white w-7 h-7 mb-6 last:mb-0 ${className}`}
+  >
     {number}
   </div>
 );
@@ -44,29 +50,42 @@ const SecurityUseSection: React.FC = () => {
   ];
 
   return (
-    <div id="securityUse" className="relative px-36 mt-40 flex flex-col items-center">
+    <div
+      id="securityUse"
+      className="relative px-36 mt-40 flex flex-col items-center"
+    >
       <div className="text-center w-full">
         <h2 className="font-semibold text-4xl my-4 text-gray-900">
           Securely Use ChatGPT: Privacy, Compliance, and Control
         </h2>
         <p className="max-w-2xl text-lg text-gray-600 mx-auto">
-          Aegis enables secure use of ChatGPT, ensuring privacy, compliance, and control over your data. We offer:
+          Aegis enables secure use of ChatGPT, ensuring privacy, compliance, and
+          control over your data. We offer:
         </p>
       </div>
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-deepblue" style={{ height: 'calc(100% - 32rem)', marginTop: '20rem' }}>
+      <div
+        className="absolute left-1/2 transform -translate-x-1/2 w-px bg-deepblue"
+        style={{ height: "calc(100% - 32rem)", marginTop: "20rem" }}
+      >
         {/* Vertical line element */}
       </div>
-      <div className="absolute flex flex-col justify-between left-1/2 transform -translate-x-1/2" style={{ height: 'calc(100% - 12rem)' }}>
+      <div
+        className="absolute flex flex-col justify-between left-1/2 transform -translate-x-1/2"
+        style={{ height: "calc(100% - 12rem)" }}
+      >
         {steps.map((_, index) => (
           <NumberedSquare
             key={index}
             number={index + 1}
-            className={index === 0 ? 'mt-80' : ''}
+            className={index === 0 ? "mt-80" : ""}
           />
         ))}
       </div>
       {steps.map((step, index) => (
-        <div key={index} className={`flex items-center my-6 w-full ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+        <div
+          key={index}
+          className={`flex items-center my-6 w-full ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+        >
           <div className="w-1/2 flex justify-center items-center">
             <step.img className="max-w-lg" />
           </div>
@@ -83,8 +102,3 @@ const SecurityUseSection: React.FC = () => {
 };
 
 export default SecurityUseSection;
-
-
-
-
-

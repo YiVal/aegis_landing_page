@@ -9,10 +9,7 @@
         "extension": ".generated.type.ts",
         "baseTypesPath": "types.ts"
       },
-      "plugins": [
-        "typescript",
-        "typescript-operations"
-      ]
+      "plugins": ["typescript", "typescript-operations"]
     }
   }
 }

@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2021", // Specifies the ECMAScript target version
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,13 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": false, // Ensures each file can be safely transpiled without relying on other import and export files
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
-  "typeRoots": [
-    "node_modules/@types",
-    "./types"
-  ], // Specifies the location of type definitions
-  "include": [
-    "src"
-  ]
+  "typeRoots": ["node_modules/@types", "./types"], // Specifies the location of type definitions
+  "include": ["src"],
 }

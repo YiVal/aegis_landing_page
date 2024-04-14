@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.600f740d.css",
+    "main.js": "/static/js/main.d24ce39e.js",
+    "static/js/787.a7309c41.chunk.js": "/static/js/787.a7309c41.chunk.js",
+    "static/media/SOC.svg": "/static/media/SOC.4115e624e467655f41aca03c334c5a5b.svg",
+    "static/media/GDPR.svg": "/static/media/GDPR.53f64799cc5c48f9d37573c63db33f67.svg",
+    "static/media/DMA.svg": "/static/media/DMA.835fece5d2709a17fe22e78f08fd1eb8.svg",
+    "static/media/ACT.svg": "/static/media/ACT.77c816e487718bda14311006131d8bab.svg",
+    "static/media/HIPAA.svg": "/static/media/HIPAA.42ea4cf004b0031f145c496446b660da.svg",
+    "static/media/3point.svg": "/static/media/3point.f23356363b6bdfdaf6e40ec7716f24b9.svg",
+    "static/media/1point.svg": "/static/media/1point.ea3f6136da787bb1389261492c513224.svg",
+    "static/media/4point.svg": "/static/media/4point.0dceb8187af151fbf63f2fc7137c338f.svg",
+    "static/media/Mask group.svg": "/static/media/Mask group.f02a72e923531648f2ac4e88f111ef16.svg",
+    "static/media/2point.svg": "/static/media/2point.2721635c1f2622848680455627ff90d8.svg",
+    "static/media/3D Morph Lines 12.svg": "/static/media/3D Morph Lines 12.ec0374a284ffc9b6d17a2a6734b7bb42.svg",
+    "static/media/aegisLogo.svg": "/static/media/aegisLogo.92400b6b572e51a185dad6aba5a543a8.svg",
+    "static/media/3D Morph Lines 9.svg": "/static/media/3D Morph Lines 9.40fee4ebf8717b79fdb34c8cd713da88.svg",
+    "static/media/Footer.svg": "/static/media/Footer.e51a4bc3b1351c4dfcffc6905fa247c8.svg",
+    "index.html": "/index.html",
+    "main.600f740d.css.map": "/static/css/main.600f740d.css.map",
+    "main.d24ce39e.js.map": "/static/js/main.d24ce39e.js.map",
+    "787.a7309c41.chunk.js.map": "/static/js/787.a7309c41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.600f740d.css",
+    "static/js/main.d24ce39e.js"
+  ]
+}

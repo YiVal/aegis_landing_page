@@ -10,6 +10,9 @@ export default {
       scrollBehavior: ["smooth"],
       colors: {
         brown: "#1E3A2B",
+        deepblue: "#1D0F74",
+        bgblue: "#231676",
+        footerblue: "#130955",
       },
       minWidth: {
         1024: "1024px",

@@ -1,50 +1,50 @@
 import React from "react";
-
-//import ReactPlayer from "react-player";
-import videoSrc from "../assets/Kakuvideo.mp4";
+// Only import the SVG as a React component
+import { ReactComponent as BackgroundImage } from "../assets/3D Morph Lines 12.svg";
 
 const HeroSection: React.FC = () => {
   return (
-    <div id="hero" className="flex flex-col py-12 px-36 text-xs mt-16 ">
-      <div className="bg-white flex rounded-full mx-auto">
-        <div className="font-bold text-white p-1 bg-black rounded-full">
-          New
-        </div>
-        <div className="p-1">Guide to visually impressive essays! 🎉</div>
-      </div>
+    <div
+      id="hero"
+      className="hero-section flex flex-col bg-bgblue py-12 px-36 text-xs mt-0 mb-24"
+      style={{
+        width: '100%', // Changed from 1440px to 100% for responsive design
+        height: '640px', 
+      }}
+    >
       <div className="flex text-center justify-center my-8">
-        <div className="text-5xl font-bold max-w-3xl">
-          5-Minute STEM Essays: Plagiarism-Free
+        <div className="text-5xl text-white font-bold max-w-3xl">
+          The Most Secure Way for Your Employees to use ChatGPT
         </div>
       </div>
       <div className="flex text-center justify-center py-4">
-        <div className="text-sm text-gray-500 max-w-72">
-          The easy way to write a well-researched and informative STEM essay
+        <div className="text-sm text-white max-w-80">
+          Productivity, Compliance, Privacy, Trust & Safety
         </div>
       </div>
+      {/* Use SVG as a React component directly */}
+      <BackgroundImage
+        style={{
+          position: 'absolute',
+          bottom: 0, // Aligns the image to the bottom of the hero section
+          left: 0, // Aligns the image to the left of the hero section
+          width: '100%', // Ensures the image spans the width of the hero section
+          height: 'auto' // Adjust height to maintain aspect ratio
+        }}
+      />
       <a
         href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
-        className="flex justify-center bg-blue-600 mx-auto text-white py-2 text-sm px-6 my-4 rounded hover:bg-blue-700"
+        className="flex justify-center bg-white mt-8 mx-auto text-bgblue py-2 text-sm px-6 my-4 rounded hover:bg-blue-700 hover:text-white"
+        style={{ position: 'relative', zIndex: 10 }}
         target="_blank"
         rel="noopener noreferrer"
       >
         Start for Free
       </a>
-      <video
-        controls
-        autoPlay
-        muted
-        loop
-        height={640}
-        className="mx-auto flex justify-center my-8"
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Insert an empty line here */}
     </div>
   );
 };
 
 export default HeroSection;
+
+

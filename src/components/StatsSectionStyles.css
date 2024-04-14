@@ -1,0 +1,29 @@
+.stat-card {
+  width: 100%;
+  position: relative; /* Ensures that positioned pseudo-elements are contained within the card */
+}
+
+.border-r-custom::after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: 15%; /* Changed from 20% to 0 */
+  bottom: 15%; /* Changed from 20% to 0 */
+  width: 1px;
+  background-color: #ccc;
+  z-index: 1;
+}
+
+.stats-section {
+  padding: 20px 120px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 2px;
+  padding: 35px 45px;
+}
+

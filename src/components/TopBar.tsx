@@ -1,31 +1,31 @@
 import React from "react";
+import { ReactComponent as IconImage } from "../assets/avatars/aegisLogo.svg";
 
 const TopBar: React.FC = () => {
   return (
     <nav
       id="topbar"
-      className="px-36 h-20 flex items-center justify-between text-sm"
+      className="px-36 h-20 bg-bgblue flex items-center justify-between text-sm"
     >
-      <div className="flex justify-between items-center w-1/2">
+      <div className="flex items-center w-1/2">
         <a href="#topbar" className="flex items-center">
-          <img className="w-8 h-8" src="/favicon.ico" alt="Logo" />
-          <div className="text-xl ml-1 font-extrabold">STEM Essay!</div>
+          <IconImage className="ml-2 w-15 h-8" title="Logo" />
         </a>
-        <a href="#pricing" className=" hover:text-gray-900 mx-5">
-          Pricing
+        <a href="#stats" className="text-white hover:text-white ml-12">
+          Compliances
+        </a>
+        <a href="#callTo" className="text-white hover:text-white ml-12">
+          Customers
         </a>
       </div>
-      <div className="flex justify-between items-center w-1/2">
-        <a href="#testimonial" className=" hover:text-gray-900 mx-5">
-          Testimonial
-        </a>
+      <div className="flex items-center w-1/2 justify-end">
         <div className="flex justify-between items-center h-10">
-          <a href="/login" className=" text-gray-500 hover:text-gray-900 px-4">
+          <a href="/login" className="text-white hover:text-gray-900 px-4">
             Log In
           </a>
           <a
             href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
-            className="bg-blue-500 h-full px-4 hover:bg-blue-700 text-white rounded-md flex items-center"
+            className="bg-white text-bgblue hover:bg-blue-700 hover:text-white rounded-md h-full px-4 flex items-center"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -38,3 +38,7 @@ const TopBar: React.FC = () => {
 };
 
 export default TopBar;
+
+
+
+

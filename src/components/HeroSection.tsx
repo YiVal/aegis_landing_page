@@ -24,16 +24,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       {/* Use SVG as a React component directly */}
-      <BackgroundImage
-        style={{
-          position: "absolute",
-          bottom: 0, // Aligns the image to the bottom of the hero section
-          left: 0, // Aligns the image to the left of the hero section
-          width: "100%", // Ensures the image spans the width of the hero section
-          height: "auto",
-          zIndex: 1,// Adjust height to maintain aspect ratio
-        }}
-      />
+      <BackgroundImage className="background-image" />
       <a
         href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
         className="flex justify-center bg-white mt-8 mx-auto text-bgblue py-2 text-sm px-6 my-4 rounded hover:bg-blue-700 hover:text-white"

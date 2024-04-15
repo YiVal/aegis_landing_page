@@ -26,3 +26,19 @@
   gap: 60px 2px;
   padding: 35px 45px;
 }
+
+.background-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 320px; /* Adjust based on your design needs */
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .background-image {
+    min-height: 200px; /*Smaller height for mobile devices */
+  }
+}

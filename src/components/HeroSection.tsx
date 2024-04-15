@@ -30,7 +30,8 @@ const HeroSection: React.FC = () => {
           bottom: 0, // Aligns the image to the bottom of the hero section
           left: 0, // Aligns the image to the left of the hero section
           width: "100%", // Ensures the image spans the width of the hero section
-          height: "auto", // Adjust height to maintain aspect ratio
+          height: "auto",
+          zIndex: 1,// Adjust height to maintain aspect ratio
         }}
       />
       <a

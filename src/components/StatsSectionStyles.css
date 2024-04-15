@@ -6,7 +6,7 @@
 .border-r-custom::after {
   position: absolute;
   top: 15%; /* Changed from 20% to 0 */
-  right: 5%;
+  right: 1%;
   bottom: 15%; /* Changed from 20% to 0 */
   z-index: 1;
   width: 1px;
@@ -25,20 +25,4 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 60px 2px;
   padding: 35px 45px;
-}
-
-.background-image {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  min-height: 320px; /* Adjust based on your design needs */
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .background-image {
-    min-height: 200px; /*Smaller height for mobile devices */
-  }
 }

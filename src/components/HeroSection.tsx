@@ -1,15 +1,14 @@
 import React from "react";
 
-// Only import the SVG as a React component
 import { ReactComponent as BackgroundImage } from "../assets/3D Morph Lines 12.svg";
 
 const HeroSection: React.FC = () => {
   return (
     <div
       id="hero"
-      className="hero-section flex flex-col bg-bgblue py-12 px-36 text-xs mt-0 mb-24"
+      className="hero-section flex flex-col bg-bgblue py-12 px-36 text-xs mt-0 mb-24 relative"
       style={{
-        width: "100%", // Changed from 1440px to 100% for responsive design
+        width: "100%",
         height: "640px",
       }}
     >
@@ -23,8 +22,19 @@ const HeroSection: React.FC = () => {
           Productivity, Compliance, Privacy, Trust & Safety
         </div>
       </div>
-      {/* Use SVG as a React component directly */}
-      <BackgroundImage className="background-image" />
+      {/* SVG Container */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "408px", // set to original SVG height or use a percentage
+          zIndex: 1,
+        }}
+      >
+        <BackgroundImage style={{ width: "100%", height: "100%" }} />
+      </div>
       <a
         href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
         className="flex justify-center bg-white mt-8 mx-auto text-bgblue py-2 text-sm px-6 my-4 rounded hover:bg-blue-700 hover:text-white"

@@ -1,11 +1,11 @@
 import React from "react";
 import "./StatsSectionStyles.css";
 
+import { ReactComponent as StatCardImage } from "../assets/30.svg";
 import { ReactComponent as ACTICON } from "../assets/ACT.svg";
 import { ReactComponent as DMAICON } from "../assets/DMA.svg";
 import { ReactComponent as GDPRICON } from "../assets/GDPR.svg";
-import { ReactComponent as HIPAAICON } from "../assets/HIPAA.svg";
-import { ReactComponent as StatCardImage } from "../assets/Mask group.svg"; // Importing SVG correctly
+import { ReactComponent as HIPAAICON } from "../assets/HIPAA.svg"; // Importing SVG correctly
 import { ReactComponent as SOCICON } from "../assets/SOC.svg";
 
 interface StatCardProps {
@@ -77,8 +77,9 @@ const StatsSection: React.FC = () => {
         ))}
       </div>
       <StatCardImage
-        className="absolute top-[-90px] left-0 w-[95%] h-auto"
+        className="absolute bottom-0 right-36 w-[40%] h-[60%] mt-8"
         style={{
+          marginTop: "32px", // Adds margin top of 20px
         }}
       />
     </div>

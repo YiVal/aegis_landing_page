@@ -19,9 +19,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       {/* SVG Container - consider if responsiveness is needed for the SVG as well */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-auto z-0"
-      >
+      <div className="absolute bottom-0 left-0 w-full h-auto z-0">
         <BackgroundImage className="w-full h-full" />
       </div>
       <a
@@ -37,4 +35,3 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
-

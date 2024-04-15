@@ -77,13 +77,8 @@ const StatsSection: React.FC = () => {
         ))}
       </div>
       <StatCardImage
+        className="absolute top-[-90px] left-0 w-[95%] h-auto"
         style={{
-          position: "absolute",
-          top: "-90px",
-          bottom: 0, // Aligns the image to the bottom of the hero section
-          left: 0, // Aligns the image to the left of the hero section
-          width: "95%", // Ensures the image spans the width of the hero section
-          height: "auto", // Keeps the image's aspect ratio
         }}
       />
     </div>

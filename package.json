@@ -1,7 +1,7 @@
 {
   "name": "aegis_landing",
   "version": "0.1.0",
-  "homepage": "https://yival.github.io/aegis_landing_page/",
+  "homepage": ".",
   "owner": "@github.com/YiVal",
   "type": "module",
   "license": "AGPL-3.0",

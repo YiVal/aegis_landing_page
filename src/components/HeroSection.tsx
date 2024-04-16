@@ -1,10 +1,10 @@
 import React from "react";
-
-import { ReactComponent as BackgroundImage } from "../assets/3D Morph Lines 12.svg";
 import { useNavigate } from "react-router-dom";
 
+import { ReactComponent as BackgroundImage } from "../assets/3D Morph Lines 12.svg";
+
 const HeroSection: React.FC = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div

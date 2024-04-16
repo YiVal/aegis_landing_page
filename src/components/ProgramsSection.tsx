@@ -1,79 +1,89 @@
 import React from "react";
 
 import logo1Icon from "../assets/logo1.jpg";
-import logo2Icon from "../assets/logo2.jpg";
-import logo3Icon from "../assets/logo3.jpg";
-import logo4Icon from "../assets/logo4.jpg";
-import { ReactComponent as Logo5Icon } from "../assets/logo5.svg";
+import logo2Icon from "../assets/logo2.jpg"; // Now this is logo3
+import logo3Icon from "../assets/logo3.jpg"; // Now this is logo2
+import logo4Icon from "../assets/logo4.jpg"; // Now this is logo5
+import { ReactComponent as Logo5Icon } from "../assets/logo5.svg"; // Now this is logo4
+import logo6Icon from "../assets/logo6.jpg";
 
 const ProgramsSection: React.FC = () => {
   const firstRow = [
     {
       src: logo1Icon,
       alt: "Logo 1",
-      style: { maxWidth: "90px", height: "auto" },
+      name: "Mymap.ai",
+      style: { maxWidth: "90px", height: "80px" }, // Fixed height for image
     },
     {
-      src: logo2Icon,
-      alt: "Logo 2",
-      style: { maxWidth: "76px", height: "auto" },
+      src: logo3Icon, // This was logo2Icon, now switched
+      alt: "Logo 3", // Updated alt text
+      name: "Flot.ai", // Updated name
+      style: { maxWidth: "120px", height: "80px" }, // Fixed height for image
     },
     {
-      src: logo3Icon,
-      alt: "Logo 3",
-      style: { maxWidth: "96px", height: "auto" },
+      src: logo2Icon, // This was logo3Icon, now switched
+      alt: "Logo 2", // Updated alt text
+      name: "Dymaxion", // Updated name
+      style: { maxWidth: "68px", height: "80px" }, // Fixed height for image
     },
   ];
 
   const secondRow = [
     {
-      src: logo4Icon,
-      alt: "Logo 4",
-      style: { maxWidth: "200px", height: "auto" },
+      Icon: Logo5Icon, // This was logo4Icon, now switched
+      alt: "Logo 4", // Updated alt text
+      style: { maxWidth: "250px", height: "auto" },
     },
     {
-      Icon: Logo5Icon,
-      alt: "Logo 5",
-      style: { maxWidth: "200px", height: "auto" },
+      src: logo4Icon, // This was Logo5Icon, now switched
+      alt: "Logo 5", // Updated alt text
+      style: { maxWidth: "170px", height: "auto" },
+    },
+    {
+      src: logo6Icon,
+      alt: "Logo 6",
+      style: { maxWidth: "110px", height: "auto" },
     },
   ];
 
   return (
     <div
       id="program"
-      className="px-36 mt-0 flex flex-col items-center text-1xl"
+      className="px-36 mt-0 flex flex-col items-center text-lg"
       style={{ backgroundColor: "#1D0F741A", height: "380px" }}
     >
-      <div className="text-center text-gray-600 py-4 mt-8 ">
+      <div className="text-center text-gray-600 py-4 mt-8">
         We Are Trusted by
       </div>
-      <div className="flex justify-center gap-32 mb-8 mt-8">
-        {" "}
-        {/* Adjusted gap for first row */}
+      <div className="flex justify-center gap-24 mb-8 mt-8">
         {firstRow.map((logo) => (
-          <img
-            key={logo.alt}
-            src={logo.src}
-            alt={logo.alt}
-            style={logo.style}
-            className="object-contain"
-          />
-        ))}
-      </div>
-      <div className="flex justify-center gap-44">
-        {" "}
-        {/* Adjusted gap for second row */}
-        {secondRow.map((logo) =>
-          logo.Icon ? (
-            <logo.Icon key={logo.alt} style={logo.style} />
-          ) : (
+          <div key={logo.alt} className="flex flex-col items-center">
             <img
-              key={logo.alt}
               src={logo.src}
               alt={logo.alt}
               style={logo.style}
-              className="object-contain"
+              className="object-contain mb-2"
             />
+            <span className="text-gray-700 text-bold text-sm">{logo.name}</span>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center gap-20">
+        {secondRow.map((logo) =>
+          logo.Icon ? (
+            <div key={logo.alt} className="flex flex-col items-center">
+              <logo.Icon style={logo.style} />
+            </div>
+          ) : (
+            <div key={logo.alt} className="flex flex-col items-center">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                style={logo.style}
+                className="object-contain mb-2"
+              />
+            </div>
           ),
         )}
       </div>

@@ -1,8 +1,11 @@
 import React from "react";
 
 import { ReactComponent as BackgroundImage } from "../assets/3D Morph Lines 12.svg";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
+  let navigate = useNavigate();
+
   return (
     <div
       id="hero"
@@ -35,15 +38,13 @@ const HeroSection: React.FC = () => {
       >
         <BackgroundImage style={{ width: "100%", height: "100%" }} />
       </div>
-      <a
-        href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
+      <button
+        onClick={() => navigate("/demo")}
         className="flex justify-center bg-white mt-8 mx-auto text-bgblue py-2 text-sm px-6 my-4 rounded hover:bg-blue-700 hover:text-white"
         style={{ position: "relative", zIndex: 10 }}
-        target="_blank"
-        rel="noopener noreferrer"
       >
         Book a demo
-      </a>
+      </button>
     </div>
   );
 };

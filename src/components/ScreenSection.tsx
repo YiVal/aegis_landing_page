@@ -1,8 +1,8 @@
 import React from "react";
 
-import { ReactComponent as Chat1Image } from "../assets/ARR chat.svg";
+import { ReactComponent as Chat1Image } from "../assets/chat1.svg";
+import { ReactComponent as Chat2Image } from "../assets/chat2.svg";
 import { ReactComponent as InvoiceImage } from "../assets/invoice.svg";
-import { ReactComponent as Chat2Image } from "../assets/payment chat.svg";
 
 const ScreenSection: React.FC = () => {
   return (

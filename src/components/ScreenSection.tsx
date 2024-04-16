@@ -3,6 +3,7 @@ import React from "react";
 import { ReactComponent as Chat1Image } from "../assets/chat1.svg";
 import { ReactComponent as Chat2Image } from "../assets/chat2.svg";
 import { ReactComponent as InvoiceImage } from "../assets/invoice.svg";
+import processImage from "../assets/secure process.jpg";
 
 const ScreenSection: React.FC = () => {
   return (
@@ -20,10 +21,8 @@ const ScreenSection: React.FC = () => {
       {/* Content */}
       <div
         className="flex justify-center items-start mt-8 w-full"
-        style={{ gap: "16px" }}
+        style={{ gap: "16px" }} // Adjust the gap here
       >
-        {" "}
-        {/* Adjust the gap here */}
         {/* Left Section for Chat SVGs */}
         <div
           className="flex flex-col justify-start items-center flex-grow"
@@ -38,6 +37,7 @@ const ScreenSection: React.FC = () => {
             style={{ height: "50%", maxHeight: "300px" }}
           />
         </div>
+
         {/* Right Section for Invoice SVG */}
         <div className="flex-grow" style={{ maxHeight: "600px" }}>
           <InvoiceImage
@@ -45,6 +45,18 @@ const ScreenSection: React.FC = () => {
             style={{ maxHeight: "600px" }}
           />
         </div>
+      </div>
+
+      {/* Process Image */}
+      <div className="mt-16 w-full" style={{ maxWidth: "calc(100% - 10px)" }}>
+        {" "}
+        {/* Adjust for the padding from the sides */}
+        <img
+          src={processImage}
+          alt="Secure Process"
+          className="w-full object-cover"
+          style={{ height: "auto", borderRadius: "10px" }} // Added border-radius
+        />
       </div>
     </div>
   );

@@ -1,19 +1,22 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { ReactComponent as BackgroundImage } from "../assets/3D Morph Lines 12.svg";
 
-// Declare Calendly as a global variable
+// Define the interface for the Calendly object
+interface CalendlyInterface {
+  initPopupWidget: (config: { url: string }) => void;
+}
+
+// Declare global Calendly interface to extend window object
 declare global {
   interface Window {
-    Calendly: any;
+    Calendly: CalendlyInterface;
   }
 }
 
 const HeroSection: React.FC = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
+    // Dynamically load the Calendly CSS and script
     const link = document.createElement("link");
     link.href = "https://assets.calendly.com/assets/external/widget.css";
     link.rel = "stylesheet";
@@ -24,6 +27,7 @@ const HeroSection: React.FC = () => {
     script.async = true;
     document.body.appendChild(script);
 
+    // Clean up function to remove the script and link when component unmounts
     return () => {
       document.head.removeChild(link);
       document.body.removeChild(script);
@@ -62,7 +66,7 @@ const HeroSection: React.FC = () => {
       >
         <BackgroundImage style={{ width: "100%", height: "100%" }} />
       </div>
-      {/* Calendly link widget begin */}
+      {/* Calendly link widget */}
       <a
         href="#"
         onClick={(e) => {
@@ -77,7 +81,6 @@ const HeroSection: React.FC = () => {
       >
         Book a demo
       </a>
-      {/* Calendly link widget end */}
     </div>
   );
 };

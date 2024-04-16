@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Start for Free
+        Book a demo
       </a>
     </div>
   );

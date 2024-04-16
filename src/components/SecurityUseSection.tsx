@@ -52,7 +52,7 @@ const SecurityUseSection: React.FC = () => {
   return (
     <div
       id="securityUse"
-      className="relative px-36 mt-40 flex flex-col items-center"
+      className="relative px-36 mt-24 flex flex-col items-center"
     >
       <div className="text-center w-full">
         <h2 className="font-semibold text-4xl my-4 text-gray-900">

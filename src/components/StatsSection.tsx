@@ -56,7 +56,7 @@ const StatsSection: React.FC = () => {
   ];
 
   return (
-    <div id="stats" className="stats-section bg-gray-100 mt-28 relative">
+    <div id="stats" className="stats-section bg-gray-100 mt-48 relative">
       <div className="flex justify-center items-center py-8">
         <div className="text-4xl text-left ml-12 mr-17">
           Data Compliance Without the Headache

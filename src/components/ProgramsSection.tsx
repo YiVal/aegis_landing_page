@@ -1,47 +1,81 @@
 import React from "react";
 
-import apLogo from "../assets/ap.png"; // Replace with actual path to your image
-import harvardLogo from "../assets/harvard.png"; // Replace with actual path to your image
-import ibLogo from "../assets/ib.png"; // Replace with actual path to your image
+import logo1Icon from "../assets/logo1.jpg";
+import logo2Icon from "../assets/logo2.jpg";
+import logo3Icon from "../assets/logo3.jpg";
+import logo4Icon from "../assets/logo4.jpg";
+import { ReactComponent as Logo5Icon } from "../assets/logo5.svg";
 
 const ProgramsSection: React.FC = () => {
-  const cards = [
+  const firstRow = [
     {
-      src: apLogo,
-      alt: "Advanced Placement Program",
-      text: "Advanced Placement Program (AP)",
+      src: logo1Icon,
+      alt: "Logo 1",
+      style: { maxWidth: "90px", height: "auto" },
     },
     {
-      src: ibLogo,
-      alt: "International Baccalaureate",
-      text: "International Baccalaureate® (IB)",
+      src: logo2Icon,
+      alt: "Logo 2",
+      style: { maxWidth: "76px", height: "auto" },
     },
     {
-      src: harvardLogo,
-      alt: "Undergraduate Application Essay",
-      text: "Undergraduate Application Essay",
+      src: logo3Icon,
+      alt: "Logo 3",
+      style: { maxWidth: "96px", height: "auto" },
+    },
+  ];
+
+  const secondRow = [
+    {
+      src: logo4Icon,
+      alt: "Logo 4",
+      style: { maxWidth: "200px", height: "auto" },
+    },
+    {
+      Icon: Logo5Icon,
+      alt: "Logo 5",
+      style: { maxWidth: "200px", height: "auto" },
     },
   ];
 
   return (
-    <div id="program" className="px-36 mt-24 flex flex-col text-sm">
-      <div className="text-center text-gray-500 py-4">
-        We support for most stem essay programs
+    <div
+      id="program"
+      className="px-36 mt-0 flex flex-col items-center text-1xl"
+      style={{ backgroundColor: "#1D0F741A", height: "380px" }}
+    >
+      <div className="text-center text-gray-600 py-4 mt-8 ">
+        We Are Trusted by
       </div>
-      <div className="flex justify-center gap-10">
-        {cards.map((card, index) => (
-          <div
-            key={card.alt}
-            className="flex flex-col justify-end items-center text-center w-72 bg-white p-4 rounded shadow"
-          >
-            <img
-              src={card.src}
-              alt={card.alt}
-              className="w-20 h-20 object-contain object-center"
-            />
-            <span className="text-xs max-w-36 text-gray-900">{card.text}</span>
-          </div>
+      <div className="flex justify-center gap-32 mb-8 mt-8">
+        {" "}
+        {/* Adjusted gap for first row */}
+        {firstRow.map((logo) => (
+          <img
+            key={logo.alt}
+            src={logo.src}
+            alt={logo.alt}
+            style={logo.style}
+            className="object-contain"
+          />
         ))}
+      </div>
+      <div className="flex justify-center gap-44">
+        {" "}
+        {/* Adjusted gap for second row */}
+        {secondRow.map((logo) =>
+          logo.Icon ? (
+            <logo.Icon key={logo.alt} style={logo.style} />
+          ) : (
+            <img
+              key={logo.alt}
+              src={logo.src}
+              alt={logo.alt}
+              style={logo.style}
+              className="object-contain"
+            />
+          ),
+        )}
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
   return (
     <div
       id="hero"
-      className="hero-section flex flex-col bg-bgblue py-12 px-36 text-xs mt-0 mb-24 relative"
+      className="hero-section flex flex-col bg-bgblue py-12 px-36 text-xs mt-0 relative"
       style={{
         width: "100%",
         height: "640px",

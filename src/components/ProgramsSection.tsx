@@ -6,6 +6,7 @@ import logo3Icon from "../assets/logo3.jpg"; // Now this is logo2
 import logo4Icon from "../assets/logo4.jpg"; // Now this is logo5
 import { ReactComponent as Logo5Icon } from "../assets/logo5.svg"; // Now this is logo4
 import logo6Icon from "../assets/logo6.jpg";
+import logo7Icon from "../assets/logo7.jpg";
 
 const ProgramsSection: React.FC = () => {
   const firstRow = [
@@ -26,6 +27,12 @@ const ProgramsSection: React.FC = () => {
       alt: "Logo 2", // Updated alt text
       name: "Dymaxion", // Updated name
       style: { maxWidth: "68px", height: "80px" }, // Fixed height for image
+    },
+    {
+      src: logo7Icon, // This was logo3Icon, now switched
+      alt: "Logo 7", // Updated alt text
+      name: "Drlambda.ai", // Updated name
+      style: { maxWidth: "110px", height: "80px" }, // Fixed height for image
     },
   ];
 
@@ -69,7 +76,7 @@ const ProgramsSection: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-20">
+      <div className="flex justify-center gap-28">
         {secondRow.map((logo) =>
           logo.Icon ? (
             <div key={logo.alt} className="flex flex-col items-center">

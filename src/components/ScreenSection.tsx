@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ReactComponent as Chat1Image } from "../assets/chat1.svg";
-import { ReactComponent as Chat2Image } from "../assets/chat2.svg";
+import { ReactComponent as Chat1Image } from "../assets/chat email.svg";
+import { ReactComponent as Chat3Image } from "../assets/chat invoice.svg";
+import { ReactComponent as Chat2Image } from "../assets/chat price.svg";
 import { ReactComponent as InvoiceImage } from "../assets/invoice.svg";
 import processImage from "../assets/secure process.jpg";
 
@@ -20,8 +21,8 @@ const ScreenSection: React.FC = () => {
 
       {/* Content */}
       <div
-        className="flex justify-center items-start mt-8 w-full"
-        style={{ gap: "16px" }} // Adjust the gap here
+        className="flex justify-center items-start mt-12 w-full"
+        style={{ gap: "4px" }} // Adjust the gap here
       >
         {/* Left Section for Chat SVGs */}
         <div
@@ -30,11 +31,15 @@ const ScreenSection: React.FC = () => {
         >
           <Chat1Image
             className="w-full"
-            style={{ height: "50%", maxHeight: "300px" }}
+            style={{ height: "50%", maxHeight: "200px" }}
           />
           <Chat2Image
             className="w-full"
-            style={{ height: "50%", maxHeight: "300px" }}
+            style={{ height: "50%", maxHeight: "200px" }}
+          />
+          <Chat3Image
+            className="w-full"
+            style={{ height: "50%", maxHeight: "200px" }}
           />
         </div>
 
@@ -47,8 +52,13 @@ const ScreenSection: React.FC = () => {
         </div>
       </div>
 
+      {/* Title */}
+      <h2 className="font-semibold text-4xl text-center text-gray-900 mt-48 mb-8">
+        Easy-to-integrate solutions that ensure data never leaves your company.
+      </h2>
+
       {/* Process Image */}
-      <div className="mt-16 w-full" style={{ maxWidth: "calc(100% - 10px)" }}>
+      <div className="mt-8 w-full" style={{ maxWidth: "calc(100% - 30px)" }}>
         {" "}
         {/* Adjust for the padding from the sides */}
         <img

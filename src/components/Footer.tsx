@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
             href="mailto:contactus@tryaegis.app"
             className="hover:text-gray-300"
           >
-            contactus@tryaegis.app
+            contactus@tryaegis.co
           </a>
         </div>
       </div>

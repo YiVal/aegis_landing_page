@@ -72,7 +72,7 @@ const HeroSection: React.FC = () => {
         onClick={(e) => {
           e.preventDefault();
           window.Calendly.initPopupWidget({
-            url: "https://calendly.com/luhan-szyj/30min",
+            url: "https://calendly.com/tryaegis/30min",
           });
           return false;
         }}

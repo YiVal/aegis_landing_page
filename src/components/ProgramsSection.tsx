@@ -7,6 +7,7 @@ import logo4Icon from "../assets/logo4.jpg"; // Now this is logo5
 import { ReactComponent as Logo5Icon } from "../assets/logo5.svg"; // Now this is logo4
 import logo6Icon from "../assets/logo6.jpg";
 import logo7Icon from "../assets/logo7.jpg";
+import logo8Icon from "../assets/logo8.jpg";
 
 const ProgramsSection: React.FC = () => {
   const firstRow = [
@@ -45,12 +46,17 @@ const ProgramsSection: React.FC = () => {
     {
       src: logo4Icon, // This was Logo5Icon, now switched
       alt: "Logo 5", // Updated alt text
-      style: { maxWidth: "170px", height: "auto" },
+      style: { maxWidth: "150px", height: "auto" },
     },
     {
       src: logo6Icon,
       alt: "Logo 6",
       style: { maxWidth: "110px", height: "auto" },
+    },
+    {
+      src: logo8Icon,
+      alt: "Logo 8",
+      style: { maxWidth: "170px", height: "auto" },
     },
   ];
 

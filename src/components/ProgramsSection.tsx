@@ -42,7 +42,7 @@ const ProgramsSection: React.FC = () => {
     {
       Icon: Logo5Icon, // This was logo4Icon, now switched
       alt: "Logo 4", // Updated alt text
-      style: { maxWidth: "250px", height: "auto" },
+      style: { maxWidth: "170px", height: "auto" },
     },
     {
       src: logo4Icon, // This was Logo5Icon, now switched
@@ -62,7 +62,7 @@ const ProgramsSection: React.FC = () => {
     {
       src: logo9Icon,
       alt: "Logo 9",
-      style: { maxWidth: "150px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "130px", height: "auto", borderRadius: "10px" },
     },
   ];
 
@@ -88,14 +88,25 @@ const ProgramsSection: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-12">
+      <div
+        className="flex justify-center gap-12"
+        style={{ alignItems: "center" }}
+      >
         {secondRow.map((logo) =>
           logo.Icon ? (
-            <div key={logo.alt} className="flex flex-col items-center">
+            <div
+              key={logo.alt}
+              className="flex justify-center items-center"
+              style={{ height: "90px" }}
+            >
               <logo.Icon style={logo.style} />
             </div>
           ) : (
-            <div key={logo.alt} className="flex flex-col items-center">
+            <div
+              key={logo.alt}
+              className="flex justify-center items-center"
+              style={{ height: "90px" }}
+            >
               <img
                 src={logo.src}
                 alt={logo.alt}

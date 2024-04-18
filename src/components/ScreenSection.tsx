@@ -32,15 +32,15 @@ const ScreenSection: React.FC = () => {
         >
           <Chat1Image
             className="w-full"
-            style={{ height: "33%", maxHeight: "200px" }}
+            style={{ height: "31%", maxHeight: "200px" }}
           />
           <Chat2Image
             className="w-full"
-            style={{ height: "33%", maxHeight: "200px" }}
+            style={{ height: "31%", maxHeight: "200px" }}
           />
           <Chat3Image // Added third chat SVG
             className="w-full"
-            style={{ height: "33%", maxHeight: "200px" }}
+            style={{ height: "31%", maxHeight: "200px" }}
           />
         </div>
 

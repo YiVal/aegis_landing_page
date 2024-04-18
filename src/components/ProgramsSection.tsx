@@ -8,6 +8,7 @@ import { ReactComponent as Logo5Icon } from "../assets/logo5.svg"; // Now this i
 import logo6Icon from "../assets/logo6.jpg";
 import logo7Icon from "../assets/logo7.jpg";
 import logo8Icon from "../assets/logo8.jpg";
+import logo9Icon from "../assets/logo9.png";
 
 const ProgramsSection: React.FC = () => {
   const firstRow = [
@@ -46,7 +47,7 @@ const ProgramsSection: React.FC = () => {
     {
       src: logo4Icon, // This was Logo5Icon, now switched
       alt: "Logo 5", // Updated alt text
-      style: { maxWidth: "150px", height: "auto" },
+      style: { maxWidth: "150px", height: "auto", borderRadius: "10px" },
     },
     {
       src: logo6Icon,
@@ -57,6 +58,11 @@ const ProgramsSection: React.FC = () => {
       src: logo8Icon,
       alt: "Logo 8",
       style: { maxWidth: "170px", height: "auto" },
+    },
+    {
+      src: logo9Icon,
+      alt: "Logo 9",
+      style: { maxWidth: "150px", height: "auto", borderRadius: "10px" },
     },
   ];
 
@@ -82,7 +88,7 @@ const ProgramsSection: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-28">
+      <div className="flex justify-center gap-12">
         {secondRow.map((logo) =>
           logo.Icon ? (
             <div key={logo.alt} className="flex flex-col items-center">

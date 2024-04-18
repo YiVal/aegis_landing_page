@@ -16,30 +16,31 @@ const ScreenSection: React.FC = () => {
     >
       {/* Title */}
       <h2 className="font-semibold text-4xl text-center text-gray-900 mt-16 mb-8">
-        Boost privacy with Aegis for secure ChatGPT interactions.
+        Responsible AI : Boost privacy with Aegis for secure ChatGPT
+        interactions.
       </h2>
 
       {/* Content */}
       <div
-        className="flex justify-center items-start mt-12 w-full"
-        style={{ gap: "4px" }} // Adjust the gap here
+        className="flex justify-center items-start mt-8 w-full"
+        style={{ gap: "16px" }} // Adjust the gap here
       >
         {/* Left Section for Chat SVGs */}
         <div
           className="flex flex-col justify-start items-center flex-grow"
-          style={{ maxHeight: "100%" }}
+          style={{ maxHeight: "600px" }} // Adjusted to accommodate three SVGs
         >
           <Chat1Image
             className="w-full"
-            style={{ height: "50%", maxHeight: "200px" }}
+            style={{ height: "33%", maxHeight: "200px" }}
           />
           <Chat2Image
             className="w-full"
-            style={{ height: "50%", maxHeight: "200px" }}
+            style={{ height: "33%", maxHeight: "200px" }}
           />
-          <Chat3Image
+          <Chat3Image // Added third chat SVG
             className="w-full"
-            style={{ height: "50%", maxHeight: "200px" }}
+            style={{ height: "33%", maxHeight: "200px" }}
           />
         </div>
 

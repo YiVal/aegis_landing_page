@@ -13,6 +13,7 @@ export default {
         deepblue: "#1D0F74",
         bgblue: "#231676",
         footerblue: "#130955",
+        lightdeepblue: "#1D0F7424",
       },
       minWidth: {
         1024: "1024px",

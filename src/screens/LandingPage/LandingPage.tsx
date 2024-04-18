@@ -1,6 +1,7 @@
 import React from "react";
 
 import CallToActionSection from "../../components/CallToActionSection";
+import CompanySection from "../../components/CompanySection";
 import Footer from "../../components/Footer";
 import HeroSection from "../../components/HeroSection";
 //import ProgramsSection from "../../components/ProgramsSection";
@@ -15,6 +16,7 @@ const LandingPage: React.FC = () => {
     <>
       <TopBar />
       <HeroSection />
+      <CompanySection />
       <ProgramsSection />
       <StatsSection />
       <ScreenSection />

@@ -49,7 +49,7 @@ const CompanySection: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: "#1D0F7424",
+        //backgroundColor: "#1D0F7424",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -58,12 +58,9 @@ const CompanySection: React.FC = () => {
         width: "100%",
       }}
     >
-      <h2
-        className="text-2xl text-center text-gray-700 mb-12"
-        style={{ width: "100%" }}
-      >
-        Built by AI, privacy & safety experts from companies that care deeply
-        about privacy.
+      <h2 className="text-center text-gray-700 mb-12" style={{ width: "100%" }}>
+        Built By AI, Privacy & Safety Experts From Companies That Care Deeply
+        About Privacy.
       </h2>
       <div
         style={{
@@ -86,7 +83,7 @@ const CompanySection: React.FC = () => {
             }}
           >
             <div style={iconBackgroundStyle}>
-              <company.Icon style={{ height: "34px", width: "34px" }} />
+              <company.Icon style={{ height: "36px", width: "36px" }} />
             </div>
             <span
               style={{

@@ -1,5 +1,6 @@
 import React from "react";
 
+import logo10Icon from "../assets/logo 10.png";
 import logo1Icon from "../assets/logo1.jpg";
 import logo2Icon from "../assets/logo2.jpg"; // Now this is logo3
 import logo3Icon from "../assets/logo3.jpg"; // Now this is logo2
@@ -63,6 +64,11 @@ const ProgramsSection: React.FC = () => {
       src: logo9Icon,
       alt: "Logo 9",
       style: { maxWidth: "130px", height: "auto", borderRadius: "10px" },
+    },
+    {
+      src: logo10Icon,
+      alt: "Logo 10",
+      style: { maxWidth: "160px", height: "auto", borderRadius: "10px" },
     },
   ];
 

@@ -42,7 +42,6 @@ const CompanySection: React.FC = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
     marginRight: "10px",
   };
 

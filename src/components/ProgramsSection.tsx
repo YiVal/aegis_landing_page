@@ -43,12 +43,12 @@ const ProgramsSection: React.FC = () => {
     {
       Icon: Logo5Icon, // This was logo4Icon, now switched
       alt: "Logo 4", // Updated alt text
-      style: { maxWidth: "170px", height: "auto" },
+      style: { maxWidth: "150px", height: "auto" },
     },
     {
       src: logo4Icon, // This was Logo5Icon, now switched
       alt: "Logo 5", // Updated alt text
-      style: { maxWidth: "150px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "140px", height: "auto", borderRadius: "10px" },
     },
     {
       src: logo6Icon,
@@ -58,17 +58,17 @@ const ProgramsSection: React.FC = () => {
     {
       src: logo8Icon,
       alt: "Logo 8",
-      style: { maxWidth: "170px", height: "auto" },
+      style: { maxWidth: "150px", height: "auto" },
     },
     {
       src: logo9Icon,
       alt: "Logo 9",
-      style: { maxWidth: "130px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "110px", height: "auto", borderRadius: "10px" },
     },
     {
       src: logo10Icon,
       alt: "Logo 10",
-      style: { maxWidth: "160px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "150px", height: "auto", borderRadius: "10px" },
     },
   ];
 
@@ -95,7 +95,7 @@ const ProgramsSection: React.FC = () => {
         ))}
       </div>
       <div
-        className="flex justify-center gap-12"
+        className="flex justify-center gap-6"
         style={{ alignItems: "center" }}
       >
         {secondRow.map((logo) =>

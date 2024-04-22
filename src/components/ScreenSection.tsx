@@ -16,8 +16,8 @@ const ScreenSection: React.FC = () => {
     >
       {/* Title */}
       <h2 className="font-semibold text-4xl text-center text-gray-900 mt-16 mb-8">
-        Responsible AI : Boost privacy with Aegis for secure ChatGPT
-        interactions.
+        Model-Based Automatic Sensitive Data Detection & Customizable
+        Annotations.
       </h2>
 
       {/* Content */}

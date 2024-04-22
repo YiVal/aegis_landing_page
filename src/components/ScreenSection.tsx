@@ -1,8 +1,8 @@
 import React from "react";
 
-import { ReactComponent as Chat1Image } from "../assets/chat email.svg";
-import { ReactComponent as Chat3Image } from "../assets/chat invoice.svg";
-import { ReactComponent as Chat2Image } from "../assets/chat price.svg";
+import { ReactComponent as Chat1Image } from "../assets/chat1.svg";
+import { ReactComponent as Chat2Image } from "../assets/chat2.svg";
+import { ReactComponent as Chat3Image } from "../assets/chat3.svg";
 import { ReactComponent as InvoiceImage } from "../assets/invoice.svg";
 import processImage from "../assets/secure process.jpg";
 

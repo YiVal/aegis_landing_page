@@ -2,6 +2,7 @@ import React from "react";
 
 import logo10Icon from "../assets/logo 10.png";
 import logo1Icon from "../assets/logo1.jpg";
+import logo11Icon from "../assets/logo11.png";
 import logo2Icon from "../assets/logo2.jpg"; // Now this is logo3
 import logo3Icon from "../assets/logo3.jpg"; // Now this is logo2
 import logo4Icon from "../assets/logo4.jpg"; // Now this is logo5
@@ -30,6 +31,12 @@ const ProgramsSection: React.FC = () => {
       alt: "Logo 2", // Updated alt text
       name: "Dymaxion", // Updated name
       style: { maxWidth: "68px", height: "80px" }, // Fixed height for image
+    },
+    {
+      src: logo11Icon, // This was logo3Icon, now switched
+      alt: "Logo 11", // Updated alt text
+      name: "AI Geometric", // Updated name
+      style: { maxWidth: "70px", height: "80px", borderRadius: "20px" }, // Fixed height for image
     },
     {
       src: logo7Icon, // This was logo3Icon, now switched

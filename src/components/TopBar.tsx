@@ -25,7 +25,7 @@ const TopBar: React.FC = () => {
             Log In
           </a>
           <a
-            href="https://airtable.com/appfrX6dbb3c6baEz/shrIGfNTAY2PRcEFv"
+            href="https://airtable.com/appfrX6dbb3c6baEz/shrpgOcRXrn86NMPn"
             className="bg-white text-bgblue hover:bg-blue-700 hover:text-white rounded-md h-full px-4 flex items-center"
             target="_blank"
             rel="noopener noreferrer"

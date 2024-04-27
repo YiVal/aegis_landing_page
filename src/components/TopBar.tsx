@@ -16,7 +16,7 @@ const TopBar: React.FC = () => {
           Compliances
         </a>
         <a href="#callTo" className="text-white hover:text-white ml-12">
-          Customers
+          Contact Us
         </a>
       </div>
       <div className="flex items-center w-1/2 justify-end">

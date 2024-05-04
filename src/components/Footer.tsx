@@ -18,34 +18,26 @@ const Footer: React.FC = () => {
         className="w-full flex justify-between items-center py-4 mt-3 border-b border-gray-300"
         style={{ paddingLeft: 0, paddingRight: 0 }}
       >
-        {" "}
-        {/* Removing default padding */}
-        <div className="flex">
-          {" "}
-          {/* New flex container for icons */}
+        <div className="flex items-center">
+          {/* Left side with IconImage */}
           <IconImage style={{ height: "50px" }} />
+        </div>
+
+        {/* Removing default padding */}
+        <div className="flex items-center justify-center w-full">
+          {/* Group of icons */}
           <a
             href="https://twitter.com/aegis8544"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            {/* Link for XIcon */}
-            <XIcon
-              style={{
-                height: "50px",
-                marginRight: "12px",
-                marginLeft: "500px",
-              }}
-            />
+            <XIcon style={{ height: "50px", marginRight: "12px" }} />
           </a>
           <a
             href="https://www.linkedin.com/company/101981488"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            {/* Link for LinkedinIcon */}
             <LinkedinIcon style={{ height: "50px", marginRight: "12px" }} />
           </a>
           <a
@@ -53,8 +45,6 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            {/* Link for LinkedinIcon */}
             <YoutuberIcon style={{ height: "50px" }} />
           </a>
         </div>

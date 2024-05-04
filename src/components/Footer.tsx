@@ -4,6 +4,7 @@ import React from "react";
 import { ReactComponent as IconImage } from "../assets/avatars/aegisLogo.svg";
 import { ReactComponent as LinkedinIcon } from "../assets/LinkedIn 1.svg";
 import { ReactComponent as XIcon } from "../assets/x.svg";
+import { ReactComponent as YoutuberIcon } from "../assets/youtuber.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -45,7 +46,16 @@ const Footer: React.FC = () => {
           >
             {" "}
             {/* Link for LinkedinIcon */}
-            <LinkedinIcon style={{ height: "50px" }} />
+            <LinkedinIcon style={{ height: "50px", marginRight: "12px" }} />
+          </a>
+          <a
+            href="https://www.youtube.com/@AegisSafety"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            {/* Link for LinkedinIcon */}
+            <YoutuberIcon style={{ height: "50px" }} />
           </a>
         </div>
         <div className="text-white">

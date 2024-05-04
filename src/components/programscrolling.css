@@ -1,0 +1,29 @@
+/* programscrolling.css */
+
+@keyframes scrollLogo {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-container {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+  align-items: center;
+  padding: 20px 0;
+  gap: 64px;
+}
+
+.logo-item {
+  animation: scrollLogo 5s linear infinite;
+}
+
+.logo-item:hover {
+  animation-play-state: paused;
+}
+
+/* Styles for webkit scrollbar here if you still want them for manual scrolling */

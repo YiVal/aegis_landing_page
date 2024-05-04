@@ -1,5 +1,7 @@
 import React from "react";
+import "./programscrolling.css";
 
+// Import logo assets
 import logo10Icon from "../assets/logo 10.png";
 import logo1Icon from "../assets/logo1.jpg";
 import logo11Icon from "../assets/logo11.png";
@@ -12,8 +14,6 @@ import logo7Icon from "../assets/logo7.jpg";
 import logo8Icon from "../assets/logo8.jpg";
 import logo9Icon from "../assets/logo9.png";
 
-import "./programscrolling.css";
-
 const ProgramsSection = () => {
   const logos = [
     {
@@ -23,73 +23,86 @@ const ProgramsSection = () => {
       style: { maxWidth: "90px", height: "80px" },
     },
     {
-      src: logo3Icon,
-      alt: "Logo 3",
-      name: "Flot.ai",
-      style: { maxWidth: "120px", height: "80px" },
-    },
-    {
       src: logo2Icon,
       alt: "Logo 2",
       name: "Dymaxion",
       style: { maxWidth: "68px", height: "80px" },
     },
     {
-      src: logo11Icon,
-      alt: "Logo 11",
-      name: "AI Geometric",
-      style: { maxWidth: "70px", height: "80px", borderRadius: "20px" },
+      src: logo3Icon,
+      alt: "Logo 3",
+      name: "Flot.ai",
+      style: { maxWidth: "120px", height: "80px" },
     },
     {
       src: logo7Icon,
       alt: "Logo 7",
       name: "Drlambda.ai",
       style: { maxWidth: "110px", height: "80px" },
-    },
+    }, // This is the adjusted logo
     {
-      Icon: Logo5Icon,
-      alt: "Logo 4",
-      style: { maxWidth: "150px", height: "auto" },
+      src: logo11Icon,
+      alt: "Logo 11",
+      name: "AI Geometric",
+      style: { maxWidth: "70px", height: "80px", borderRadius: "10px" },
     },
     {
       src: logo4Icon,
+      alt: "Logo 4",
+      style: { maxWidth: "170px", height: "auto", borderRadius: "10px" },
+    },
+    {
+      Icon: Logo5Icon,
       alt: "Logo 5",
-      style: { maxWidth: "140px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "180px", height: "auto" },
     },
     {
       src: logo6Icon,
       alt: "Logo 6",
-      style: { maxWidth: "110px", height: "auto" },
+      style: { maxWidth: "150px", height: "auto" },
     },
     {
       src: logo8Icon,
       alt: "Logo 8",
-      style: { maxWidth: "150px", height: "auto" },
+      style: { maxWidth: "180px", height: "auto" },
     },
     {
       src: logo9Icon,
       alt: "Logo 9",
-      style: { maxWidth: "110px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "130px", height: "auto", borderRadius: "10px" },
     },
     {
       src: logo10Icon,
       alt: "Logo 10",
-      style: { maxWidth: "150px", height: "auto", borderRadius: "10px" },
+      style: { maxWidth: "170px", height: "auto", borderRadius: "10px" },
     },
   ];
+
+  const logoList = [
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+  ]; // Double the list to maintain continuity
 
   return (
     <div
       id="program"
-      className="px-36 mt-0 flex flex-col items-center text-lg"
-      style={{ backgroundColor: "#1D0F741A", height: "380px" }}
+      className="px-36 mt-0 flex flex-col items-center text-lg relative"
+      style={{ backgroundColor: "#1D0F741A", height: "300px" }}
     >
       <div className="text-center text-gray-600 py-4 mt-8">
         We Are Trusted by
       </div>
-      <div className="logo-container">
-        {logos.map((logo) => (
-          <div key={logo.alt} className="logo-item flex flex-col items-center">
+      <div className="logo-container relative overflow-hidden">
+        {logoList.map((logo, index) => (
+          <div
+            key={`${logo.alt}-${index}`}
+            className={`logo-item ${logo.name ? "logo-item-text-right" : ""} flex items-center`}
+          >
             {logo.Icon ? (
               <logo.Icon style={logo.style} />
             ) : (

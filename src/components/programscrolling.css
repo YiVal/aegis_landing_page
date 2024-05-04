@@ -1,29 +1,46 @@
 /* programscrolling.css */
 
 @keyframes scrollLogo {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0%);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
 
 .logo-container {
   display: flex;
-  overflow-x: hidden;
+  overflow: hidden;
   white-space: nowrap;
   align-items: center;
   padding: 20px 0;
   gap: 64px;
+  animation: scrollLogo 280s linear infinite;
+  position: relative;
+  z-index: 1; /* Ensure it's under the fade covers */
 }
 
 .logo-item {
-  animation: scrollLogo 5s linear infinite;
+  flex-shrink: 0; /* Prevent logos from being squished */
 }
 
 .logo-item:hover {
   animation-play-state: paused;
 }
 
-/* Styles for webkit scrollbar here if you still want them for manual scrolling */
+.logo-item-text-right {
+  display: flex;
+  align-items: center; /* Centers the text vertically relative to the icon */
+  gap: 14px; /* Adds some space between the icon and the text */
+}
+
+.logo-item-text-right img,
+.logo-item-text-right svg {
+  flex-shrink: 0; /* Prevents the image from resizing unexpectedly */
+}
+
+.logo-item-text-right span {
+  white-space: nowrap; /* Ensures the text stays on one line */
+  font-size: 1em;
+}

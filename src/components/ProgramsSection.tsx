@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./programscrolling.css";
 
 // Import logo assets
@@ -39,7 +39,7 @@ const ProgramsSection = () => {
       alt: "Logo 7",
       name: "Drlambda.ai",
       style: { maxWidth: "110px", height: "80px" },
-    }, // This is the adjusted logo
+    },
     {
       src: logo11Icon,
       alt: "Logo 11",
@@ -88,41 +88,57 @@ const ProgramsSection = () => {
     ...logos,
   ]; // Double the list to maintain continuity
 
+  const logoContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (logoContainerRef.current) {
+      const totalWidth = Array.from(
+        logoContainerRef.current.children
+      ).reduce((acc: number, child: HTMLElement | Element) => {
+        if (child instanceof HTMLElement) {
+          return acc + child.offsetWidth;
+        }
+        return acc;
+      }, 0);
+
+      logoContainerRef.current.style.width = `${totalWidth}px`;
+    }
+  }, []);
+
   return (
-    <div
-      id="program"
-      className="px-36 mt-0 flex flex-col items-center text-lg relative"
-      style={{ backgroundColor: "#1D0F741A", height: "300px" }}
-    >
-      <div className="text-center text-gray-600 py-4 mt-8">
-        We Are Trusted by
-      </div>
-      <div className="logo-container relative overflow-hidden">
-        {logoList.map((logo, index) => (
-          <div
-            key={`${logo.alt}-${index}`}
-            className={`logo-item ${logo.name ? "logo-item-text-right" : ""} flex items-center`}
-          >
-            {logo.Icon ? (
-              <logo.Icon style={logo.style} />
-            ) : (
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                style={logo.style}
-                className="object-contain mb-2"
-              />
-            )}
-            {logo.name && (
-              <span className="text-gray-700 text-bold text-sm">
-                {logo.name}
-              </span>
-            )}
-          </div>
-        ))}
+    <div id="program" className="px-36 mt-0 flex flex-col items-center text-lg relative" style={{ backgroundColor: "#1D0F741A", height: "300px", overflowX: "hidden" }}>
+      <div className="text-center text-gray-600 py-4 mt-8">We Are Trusted by</div>
+      <div className="viewport">
+        <div ref={logoContainerRef} className="logo-container relative overflow-hidden">
+          {logoList.map((logo, index) => (
+            <div
+              key={`${logo.alt}-${index}`}
+              className={`logo-item ${logo.name ? "logo-item-text-right" : ""} flex items-center`}
+            >
+              {logo.Icon ? (
+                <logo.Icon style={logo.style} />
+              ) : (
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  style={logo.style}
+                  className="object-contain mb-2"
+                />
+              )}
+              {logo.name && (
+                <span className="text-gray-700 text-bold text-sm">
+                  {logo.name}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default ProgramsSection;
+
+
+

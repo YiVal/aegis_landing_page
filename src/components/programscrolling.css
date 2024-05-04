@@ -1,5 +1,3 @@
-/* programscrolling.css */
-
 @keyframes scrollLogo {
   from {
     transform: translateX(0%);
@@ -11,14 +9,13 @@
 
 .logo-container {
   display: flex;
-  overflow-x: hidden;
   white-space: nowrap;
   align-items: center;
   padding: 20px 0;
-  gap: 64px;
-  animation: scrollLogo 280s linear infinite;
+  animation: scrollLogo 80s linear infinite;
   position: relative;
-  z-index: 1; /* Ensure it's under the fade covers */
+  z-index: 1;
+  gap: 50px; /* Ensure it's under the fade covers */
 }
 
 .logo-item {
@@ -44,3 +41,10 @@
   white-space: nowrap; /* Ensures the text stays on one line */
   font-size: 1em;
 }
+
+.viewport {
+  width: 100%; /* Set the width of the viewport to 100% */
+  overflow-x: hidden; /* Hide the overflow */
+}
+
+

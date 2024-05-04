@@ -92,24 +92,38 @@ const ProgramsSection = () => {
 
   useEffect(() => {
     if (logoContainerRef.current) {
-      const totalWidth = Array.from(
-        logoContainerRef.current.children
-      ).reduce((acc: number, child: HTMLElement | Element) => {
-        if (child instanceof HTMLElement) {
-          return acc + child.offsetWidth;
-        }
-        return acc;
-      }, 0);
+      const totalWidth = Array.from(logoContainerRef.current.children).reduce(
+        (acc: number, child: HTMLElement | Element) => {
+          if (child instanceof HTMLElement) {
+            return acc + child.offsetWidth;
+          }
+          return acc;
+        },
+        0,
+      );
 
       logoContainerRef.current.style.width = `${totalWidth}px`;
     }
   }, []);
 
   return (
-    <div id="program" className="px-36 mt-0 flex flex-col items-center text-lg relative" style={{ backgroundColor: "#1D0F741A", height: "300px", overflowX: "hidden" }}>
-      <div className="text-center text-gray-600 py-4 mt-8">We Are Trusted by</div>
+    <div
+      id="program"
+      className="px-36 mt-0 flex flex-col items-center text-lg relative"
+      style={{
+        backgroundColor: "#1D0F741A",
+        height: "300px",
+        overflowX: "hidden",
+      }}
+    >
+      <div className="text-center text-gray-600 py-4 mt-8">
+        We Are Trusted by
+      </div>
       <div className="viewport">
-        <div ref={logoContainerRef} className="logo-container relative overflow-hidden">
+        <div
+          ref={logoContainerRef}
+          className="logo-container relative overflow-hidden"
+        >
           {logoList.map((logo, index) => (
             <div
               key={`${logo.alt}-${index}`}
@@ -139,6 +153,3 @@ const ProgramsSection = () => {
 };
 
 export default ProgramsSection;
-
-
-
